@@ -9,14 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Justin Thompson's Home Page</title>
+    <title>Musical Genre Classification</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/blog-home.css" rel="stylesheet">
-    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,7 +28,7 @@
 
 <body>
 
-    <!-- Navigation -->
+	<!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -67,64 +66,87 @@
     <!-- Page Content -->
     <div class="container">
 
+		<br>
+		<br>
         <div class="row">
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
 
-				<!-- Animation Header -->
                 <h1 class="page-header">
-                    <a href="http://gfycat.com/EmbarrassedYellowishHuia"><img class="img-responsive" src="http://fat.gfycat.com/EmbarrassedYellowishHuia.gif" alt=""></a>
+                    Musical Genre Classification
+                    <br>
+                    <small>With Enhanced Sparsity</small>
                 </h1>
-				
-				
-				<h1>Welcome</h1>
-                    <p>The animation above is a clip from an OpenGL project I call <i><a href="Frequency.html" >Frequency</a></i>.</p>
+
+                <!-- Intro -->
+                <h2>Introduction</h2>
+				<p>One thousand songs spanning 10 genres were taken from the GTZAN database<sup><a href="#Refs">4</a></sup> and transformed into images we call portraits. By representing songs as images, we are able to use existing methods of image classification<sup><a href="#Refs">3</a></sup> to identify the songs by genre. For each pair of genres we randomly choose 50 portraits from each genre for training and use the remaining 50 for testing. This process was repeated 50 times and we show the average <a href="#Ports">portrait</a> for each genre <a href="images/genrePortraits.png">here</a>. An L1 minimization routine<sup><a href="#Refs">1</a></sup> allows us to find the best pixels in the portraits to discern between genres while reducing the amount of data required for classification. We run the same test scheme as above using only 0.20% of the original data.</p>
 				<hr>
+
+
+
+				<!-- Sparse Sensing -->
+				<h2>Sparse Sensing</h2>
+				<p>It has been shown that exact recovery of signals from incomplete frequency information can be done by solving convex optimization problems<sup><a href="#Refs">2</a></sup>. If we can represent data in a basis where the information of concern is sparse (e.g. Fourier space for natural images), then we need only monitor a minimal amount of information to perform analysis.</p>
+
+				<a href="Music/images/sparseReconstruct1.png"><img class="img-responsive" src="Music/images/sparseReconstruct1.png" alt=""></a>
+				<br>
+				<a href="Music/images/sparseReconstruct2.png"><img class="img-responsive" src="Music/images/sparseReconstruct2.png" alt=""></a>
+				<br>
+				<a href="Music/images/sparseReconstruct3.png"><img class="img-responsive" src="Music/images/sparseReconstruct3.png" alt=""></a>
+				<br>
 				
-				
-				
-				
-				<h1>Courses</h1>
-                    <h3>AMATH 301</h3>
-                    <p><a href="AMATH301.html">This site</a> will have relevant info for AMATH 301, Autumn quarter 2014.</p>
 				<hr>
-				
-				
-				
-				<h1>Tutorials</h1>
-                    <a href="ThrowingOutFreqs.png"><img class="img-responsive" src="ThrowingOutFreqs.png" alt=""></a>
-                        <h3>Tutorials For Marissa</h3>
-                        <p>I wrote <a href="MarissaTutorial.html">these tutorials</a> for Marissa Dominguez during a research scholarship she was awarded in 2014.</p>
+
+
+				<!-- Portraits -->
+				<h2 id="Ports">Taking a Portrait</h2>
+				<p>Stuff</p>
+				<a href="Music/images/pianoKeys.png"><img class="img-responsive" src="Music/images/pianoKeys.png" alt=""></a>
 				<hr>
-				
-				<h1>Projects</h1>
-                    <h3>The Electric Depth Project</h3>
-                        <a href="ElectricDepthProject.html">
-                            <img class="img-responsive" src="ElectricDepth/images/EDPCover.png">
-                        </a>
-                    <br>    
-                    <h3>Musical Genre Classification</h3>
-                            <a href="Music.html">
-                    			<img class="img-responsive" src="Music/images/MusicPrjCover.png">
-                            </a>
+
+
+				<!-- Results -->
+				<h2>Results</h2>
+				<h3>Sparse Sensor Locations</h3>
+				<a href="Music/images/sensorLocationsResults.png"><img class="img-responsive" src="Music/images/sensorLocationsResults.png" alt=""></a>
+				<br>
+				<h3>Test results</h3>
+				<a href="Music/images/Results.png"><img class="img-responsive" src="Music/images/Results.png" alt=""></a>
+
                 <hr>
+
+                <h4>Title 1<small>&nbsp;&nbsp;&nbsp;Stuff</small></h4>
+                <a href="Music/images/circDecision.png"><img class="img-responsive" src="Music/images/circDecision.png" alt=""></a>
+                <h4>Title 2</h4>
                 
-                <h1>Links</h1>
-                    <h3><a href="http://MarissaDominguez.github.io">Marissa's Page</a> </h3>
-				<hr>
-				
+
+                <hr>
 
 
 
-            </div>
+
+
+				<!-- Refs -->
+                <h2 id="Refs">References</h2>
+
+				<p>[1] Brunton, B. W., Brunton, S. L., Proctor, J. L., & Kutz, J. N. (2013). "Optimal sensor placement and enhanced sparsity for classification," <i>arXiv preprint arXiv:1310.4217.</i></p>
+				<p>[2] E. Candés, J. Romberg, T. Tao, “Robust Uncertainty Principles: Exact Signal Reconstruction from Highly Incomplete Frequency Information,” <i>IEEE Trans. on Information Theory</i>, vol. 52, no. 2, pp. 489-509, 2006.</p>
+				<p>[3] R. Duda, P. Hart, D. Stork, <i>Pattern Classification, 2d ed.</i> New York: John Wiley & Sons, 2001.</p>
+				<p>[4] G. Tzanetakis and P.Cook, “Musical Genre Classification of Audio Signals,” <i>IEEE Trans. Speech Aud. Process.</i>, vol. 10,  no. 5, pp. 293-302, 2002.</p>
+				<p>[5] A. Georghiades, et al., “From Few to Many: Illumination Cone Models for Face Recognition under Variable Lighting and Pose,” <i>IEEE Trans. Pattern Anal. Mach. Intelligence</i>, vol. 23, no. 6, pp. 643-660, 2001.</p>
+
+
+
+
+
 
         </div>
         <!-- /.row -->
 
+        <hr>
 
-
-        <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">

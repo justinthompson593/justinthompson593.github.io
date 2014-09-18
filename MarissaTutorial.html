@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tutorials For Marissa</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/blog-home.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                	<li>
+                        <a href="https://justinthompson593.github.io/Home">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/justinthompson593">github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/justincthompson">linkedin</a>
+                    </li>
+                    <li>
+                        <a href="mailto:justinthompson593@gmail.com">gmail</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+				
+				
+				
+				<!-- Header -->
+				<h1>Tutorials For Marissa</h1>
+				<p>I wrote these tutorials for Marissa Dominguez during her scholarship at the <a href="http://www.csne-erc.org">Center for Sensorimotor Neural Engineering</a>.
+				Her work involved designing and building a small, inexpensive electromyography (EMG) data acquisition system. I assumed that since she'd never written a line of code before her 
+				scholarship, learning how to program an Arduino take the entire summer. After virtually mastering the Arduino on day two, I decided that she needed a bigger challenge.
+				These tutorials are designed to introduce general programming methods by walking the reader through various exercises.</p>
+				<hr>
+				
+				
+				
+				
+				
+				<!-- C++ Tutorial -->
+				<h2>C++ Tutorial</h2>
+                    <p>You can download the raw tutorial <a href="MarissaTutorial/CppTutorialForMarissa.zip">here</a>. After unzipping it, you will have a folder titled 'CppTutorialForMarissa.' 
+                    In that folder you'll find five .cpp files numbered 1 through 5. You guessed it; open the one titled '1Intro.cpp' first. 
+                    Also in the folder you'll see another folder titled 'Exercises.' You will be instructed to do these exercises as you read along in parts 1 through 5.
+                    Each file is to be read from top to bottom, one line at a time (kinda like how a computer reads it).  
+                    </p>
+                    
+                    <p>If you've never done anything in C++ (which should be the case if you're about to use this tutorial), then you'll need to have some way to compile and build your C++ code.
+                    This can be done with g++ via the command line or with some interactive development environment (IDE) like Xcode, Microsoft Visual Studio, <a href="http://www.geany.org">Geany</a> or <a href="http://www.gnu.org/software/emacs/">Emacs</a>. If you choose
+                    to use an IDE, make sure you download the software for <i>your</i> platform (Mac, Windows, Linux). To check that you're ready to begin this tutorial, let's compile and build the file 'exercise1.cpp' in the Exercises folder.
+                    </p>
+                    
+                    <p>
+                    <b>If you're using an IDE</b>, find how to open a new file. (This can usually be done by pressing Control+O or Command+O while in the IDE application. If that doesn't work, there will be some way to open new files by navigating to 'File'->'Open'->'Open New File' or something like that.)
+                    Find the file 'exercise1.cpp' and open it. Your IDE will have a button or command to Run the file that's currently open. The output of the program should read, 'Hello World!'.
+                    </p>
+                    
+                    <p>
+                    <b>If you're using the command line</b>, you'll need to know the full path to 'exercise1.cpp.' After I unzipped the folder 'CppTutorialForMarissa,' I put the folder on my Desktop. An easy way to find the full path is to open up the folder containing the file, then right click on the file and select 'Get Info' or 'Properties.' I simply double-clicked the folder 'CppTutorialForMarissa' on my Desktop, then double-clicked the 'Exercises' folder, right-clicked 'exercise1.cpp', and
+                    selected 'Get Info.' 
+                    </p>
+                    <p>I found that the full path to 'exercise1.cpp' on my computer is /Users/justinthompson/Desktop/CppTutorialForMarissa/Exercises/. Yours will be similar. (Note that if you're running Windows, your path will look more like this: C:\ComputerName\OtherStuff\etc\Desktop\etc.) Now I need to tell the computer where to find this file. I do this by typing the following command into the terminal and pressing return:</p>
+                    
+                    <p>
+                    <pre><code>$ cd /Users/justinthompson/Desktop/CppTutorialForMarissa/Exercises/</code></pre>
+					</p>
+
+                    <p>Now that the computer knows where to find this file, I have to tell it what to do with it. I want the compiler to take the code in 'exercise1.cpp' and turn it into an executable program named 'Hi.' In the terminal, I run:</p>
+                    
+                    
+                    <p>
+                    <pre><code>$ g++ -o Hi exercise1.cpp</code></pre>
+					</p>
+
+					<p>After hitting 'Return,' the compiler will make an executable named 'Hi' and put it in this directory. You can open up the 'Exercises' folder and you'll see the executable. You can run this file by either double-clicking on the executable in the 'Exercises' folder, or we can run this in the terminal:
+					</p>
+                    
+                    <p>
+                    <pre><code>$ ./Hi</code></pre>
+					</p>
+
+					<p>If everything went right, the output of the program should be, 'Hello World!'. Note that you don't need to name the executable that we're making. We could have run this instead:
+					</p>
+
+					<p>
+                    <pre><code>$ g++ exercise1.cpp</code></pre>
+					</p>
+					
+					<p>After hitting return, the command above will name the executable 'a.out' by default. You can run a.out like this:
+					</p>
+					
+					<p>
+                    <pre><code>$ ./a.out</code></pre>
+					</p>
+					
+					<p>Once you run the executable and see 'Hello World!' pop up, you're ready to begin. Have fun!
+					</p>
+					
+				<hr>
+				
+				
+				
+				
+				
+				<!-- Python Tutorial -->
+				<h2>Python Tutorial</h2>
+                    <p>The raw Python tutorial is <a href="MarissaTutorial/PythonTutorial.zip">here</a>. There's more to say about it.</p>
+				<hr>
+				
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Justin Thompson</strong>
+                    	</h4>
+                    	<p>105 Lewis Hall<br>Department of Applied Mathematics<br>University of Washington<br>Seattle, WA 98105</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (206) 387-8373</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:justinthompson593@gmail.com">@gmail.com</a>
+                        </li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:jct2112@uw.edu">@uw.edu</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://github.com/justinthompson593"><i class="fa fa-github fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/justincthompson"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/justin.thompson.9883"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
