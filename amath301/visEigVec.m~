@@ -177,13 +177,13 @@ plot(imOfS2Sing(1,:),imOfS2Sing(2,:),'-m','LineWidth',2);
 
 k = 3:0.1:1;
 
-for i = 1:length(k)
+for i 
 
 sing2 = [k(i) 2;2 4];
 sing2S = sing2*S2;
 plot(sing2S(1,:),sing2S(2,:),'-m','LineWidth',2);
 
-end
+
 
 
 
