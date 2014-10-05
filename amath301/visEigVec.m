@@ -175,15 +175,22 @@ plot(imOfS2Sing(1,:),imOfS2Sing(2,:),'-m','LineWidth',2);
 
 %%
 
-k = 3:0.1:1;
+close all
+clc
+k = 3:-0.01:1;
 
 for i = 1:length(k)
 
 sing2 = [k(i) 2;2 4];
+detS = det(sing2);
 sing2S = sing2*S2;
 plot(sing2S(1,:),sing2S(2,:),'-m','LineWidth',2);
+axis equal
+title(['det(sing2) = ' num2str(detS)])
+getframe;
 
 end
+
 
 
 

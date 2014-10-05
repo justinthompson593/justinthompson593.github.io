@@ -175,16 +175,23 @@ plot(imOfS2Sing(1,:),imOfS2Sing(2,:),'-m','LineWidth',2);
 
 %%
 
-k = 3:0.1:1;
+close all
 
-for i 
+k = 3:-0.04:1;
+
+for i = 1:length(k)
 
 sing2 = [k(i) 2;2 4];
+detS = det(sing2);
 sing2S = sing2*S2;
 plot(sing2S(1,:),sing2S(2,:),'-m','LineWidth',2);
+annotation('textbox',[0 0 .1 .1],'String',['det(sing2) = ' num2str(detS)])
+axis equal
+fr(i) = getframe
 
+end
 
-
+movie(fr)
 
 
 
