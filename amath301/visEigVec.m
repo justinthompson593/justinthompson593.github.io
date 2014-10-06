@@ -174,9 +174,25 @@ plot(imOfS2Sing(1,:),imOfS2Sing(2,:),'-m','LineWidth',2);
 
 
 %%
-
 close all
-clc
+%Let's start with a matrix, A, find its eigenstuffs and plot
+%it on the unit circle.
+
+A = [3 2;2 4];
+
+[V D] = eigs(A)
+
+plot(S2(1,:),S2(2,:),'-b','LineWidth',2);
+axis([-1.2 1.2 -1.2 1.2])
+axis equal
+hold on
+scatter(V(1,1),V(2,1),100,'b','filled');
+scatter(V(1,2),V(2,2),100,'b','filled');
+
+
+%%
+close all
+
 k = 3:-0.01:1;
 
 for i = 1:length(k)
