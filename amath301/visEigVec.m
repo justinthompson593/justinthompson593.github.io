@@ -175,20 +175,34 @@ plot(imOfS2Sing(1,:),imOfS2Sing(2,:),'-m','LineWidth',2);
 
 %%
 close all
-%Let's start with a matrix, A, find its eigenstuffs and plot
-%it on the unit circle.
+%Let's start with a matrix, A, find its eigenvectors, and plot
+%them on the unit circle.
 
 A = [3 2;2 4];
 
 [V D] = eigs(A)
 
 plot(S2(1,:),S2(2,:),'-b','LineWidth',2);
-axis([-1.2 1.2 -1.2 1.2])
+axis([-5 5 -5 5])
 axis equal
 hold on
-scatter(V(1,1),V(2,1),100,'b','filled');
-scatter(V(1,2),V(2,2),100,'b','filled');
 
+%% 
+%Now we'll see where A maps the unit circle
+
+imgOfS2uA = A*S2;
+plot(imgOfS2uA(1,:),imgOfS2uA(2,:),'-r','LineWidth',2);
+
+%%
+%Since they're eigenvectors, we know where they'll go,
+%but we'll plot them anyway
+
+eigVec1uA = A*V(:,1);
+eigVec2uA = A*V(:,2);
+scatter(eigVec1uA(1,1),eigVec1uA(2,1),100,'r','filled');
+scatter(eigVec2uA(1,1),eigVec2uA(2,1),100,'r','filled');
+
+%%
 
 %%
 close all
