@@ -174,6 +174,9 @@ plot(imOfS2Sing(1,:),imOfS2Sing(2,:),'-m','LineWidth',2);
 
 
 %%
+
+%Let's figure this out...
+
 close all
 %Let's start with a matrix, A, find its eigenvectors, and plot
 %them on the unit circle.
@@ -202,6 +205,11 @@ eigVec1uA = A*V(:,1);
 eigVec2uA = A*V(:,2);
 scatter(eigVec1uA(1,1),eigVec1uA(2,1),100,'r','filled');
 scatter(eigVec2uA(1,1),eigVec2uA(2,1),100,'r','filled');
+
+%If you'd like to check your matlab skills, compute and plot
+%the eigenvectors of sA right here. Also, verify that the eigenvectors
+%and eigenvalues are correct. 
+
 
 %%
 
@@ -240,7 +248,7 @@ scatter(eigVec1uA(1,1),eigVec1uA(2,1),100,'r','filled');
 scatter(eigVec2uA(1,1),eigVec2uA(2,1),100,'r','filled');
 plot(sing2S(1,:),sing2S(2,:),'-m','LineWidth',2);
 axis equal
-title(['det() = ' num2str(detS)])
+title(['det(transf) = ' num2str(detS)])
 hold off
 getframe;
 
