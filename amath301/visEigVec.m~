@@ -200,8 +200,18 @@ plot(imgOfS2uA(1,:),imgOfS2uA(2,:),'-r','LineWidth',2);
 eigVec1uA = A*V(:,1);
 eigVec2uA = A*V(:,2);
 scatter(eigVec1uA(1,1),eigVec1uA(2,1),100,'r','filled');
-scatter(eigVec2uA(1,2),eigVec2uA(2,2),100,'r','filled');
+scatter(eigVec2uA(1,1),eigVec2uA(2,1),100,'r','filled');
 
+%%
+
+%Note that if we subtract 2 from the first entry of A, we 
+%get a singular matrix. Let's call it sA.
+
+sA = [1 2;2 4];
+
+display(['The det of sA is:  ' num2str(det(sA))])
+
+[sV sD] = eigs(sA)
 
 %%
 close all

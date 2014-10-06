@@ -204,16 +204,27 @@ scatter(eigVec2uA(1,1),eigVec2uA(2,1),100,'r','filled');
 
 %%
 
+%Note that if we subtract 2 from the first entry of A, we 
+%get a singular matrix. Let's call it sA.
+
+sA = [1 2;2 4];
+
+display(['The det of sA is:  ' num2str(det(sA))])
+
+[sV sD] = eigs(sA)
+
 %%
-close all
+
+%Let's continuously transform A into sA and watch what happens
+% close all
 
 k = 3:-0.01:1;
 
 for i = 1:length(k)
 
-sing2 = [k(i) 2;2 4];
-detS = det(sing2);
-sing2S = sing2*S2;
+transf = [k(i) 2;2 4]; %This A --> sA as i --> length(k)
+detS = det(transf);
+sing2S = transf*S2;
 plot(sing2S(1,:),sing2S(2,:),'-m','LineWidth',2);
 axis equal
 title(['det(sing2) = ' num2str(detS)])
