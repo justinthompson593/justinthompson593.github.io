@@ -1,0 +1,144 @@
+\documentclass{article}
+
+\def\Xint#1{\mathchoice
+   {\XXint\displaystyle\textstyle{#1}}%
+   {\XXint\textstyle\scriptstyle{#1}}%
+   {\XXint\scriptstyle\scriptscriptstyle{#1}}%
+   {\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+   \!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$}
+     \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+\def\ddashint{\Xint=}
+\def\dashint{\Xint-}
+
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumitem}
+ \usepackage{graphicx}
+ \usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{import, pst-plot}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+
+\def\R{\mathbb{R}}
+\def\Zp{\mathbb{Z}^+}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE PAGE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\title{
+    \textmd{\textbf{AMATH 301: Extra Credit 1}}\\
+    \vspace{0.1in}
+    \textbf{Justin Thompson}\\
+    \normalsize\vspace{0.1in}\today\\
+    \date{}
+}
+
+
+\maketitle
+
+
+\textbf{Problem 1}
+Let $A \in \mathbb{R}^{2 \times 2}$ be given by $$A = \begin{pmatrix} 
+0 & -1\\
+1 & 0\\
+\end{pmatrix}.$$ We claim that 
+$$\vec{v}_1 = \begin{pmatrix} 
+1\\
+-i\\
+\end{pmatrix} \quad \text{and} \quad \vec{v}_2 = \begin{pmatrix} 
+1\\
+i\\
+\end{pmatrix}$$ are eigenvectors of $A$ with corresponding eigenvectors $$\lambda_1 = i \quad \text{and} \quad \lambda_2 = -i.$$
+\begin{proof}
+Suppose that $A \in \mathbb{R}^{2\times2}$ is given as above. We will first compute the eigenvalues of $A$ by solving the characteristic equation, det$\left( A - \lambda I \right) = \vec{0}.$ Observe,
+\begin{align*}
+\text{det}\left( A - \lambda I \right) &= \text{det}\begin{pmatrix}-\lambda&-1\\1&-\lambda\end{pmatrix}\\
+&= \left(-\lambda\right)\left(-\lambda\right) - \left(-1\right)\left(-1\right)\\
+&= \lambda^2 +1.\\
+\end{align*}
+By definition of the characteristic equation, we set $\lambda^2 + 1 = 0$ and solve for $\lambda$. This gives us two eigenvalues, $\lambda_1 = i$ and $\lambda_2 = -i$. Now we must find nonzero vectors $\vec{v}_1$ and $\vec{v}_2$ which satisfy
+\begin{equation}\label{eq1}
+\left( A - \lambda I \right)\vec{v}_1 = \vec{0} \quad \text{and} \quad \left( A - \lambda I \right)\vec{v}_2 = \vec{0}\\
+\end{equation}
+and have the property that
+\begin{equation}\label{eq2}
+A\vec{v}_1 = \lambda_1 \vec{v}_1 \quad \text{and} \quad A\vec{v}_2 = \lambda_2 \vec{v}_2.\\
+\end{equation}
+
+To solve the first equation in (\ref{eq1}), we let $\vec{v}_1 = \begin{pmatrix}x_1\\x_2\end{pmatrix}$ so that 
+\begin{align*}
+\begin{pmatrix}-\lambda_1&-1\\1&-\lambda_1\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix} = \begin{pmatrix}0\\0\end{pmatrix}.\\
+\end{align*}
+This gives us the system of equations
+\begin{align*}
+-\lambda_1 x_1 - x_2 = 0\\
+x_1 - \lambda_1 x_2 = 0.\\
+\end{align*}
+Since we're trying to find a \textit{nonzero} vector which satisfies both of these equations, I'll choose $x_1 = 1$ to make the calculations simple. Substituting $x_1 = 1$ into the first equation in our system gives $$-\lambda_1 - x_2 = 0$$ implying that $$x_2 = -\lambda_1.$$ We have to check that this solution works in the second equation before moving on. Substituting $x_1 = 1$ and $x_2 = -\lambda_1$ into the equation $x_1 - \lambda_1 x_2 = 0$ gives 
+\begin{align*}
+1 - \lambda_1 \left(-\lambda_1\right) = 0\\
+1 - i \left(-i\right) = 0\\
+1 - \left( i\left(-i\right)\right) = 0\\
+1 + i^2 = 0\\
+0 = 0\\
+\end{align*}
+so that the second equation is also satisfied. (How do we know that the second equation will always work out? This would be a good exercise if you're interested!) Since both equations work out, then $$\vec{v}_1 = \begin{pmatrix}1\\-i\end{pmatrix} \quad \text{and} \quad \lambda_1 = i$$ should satisfy $A\vec{v}_1 = \lambda_1 \vec{v}_1$. Let's check.
+\begin{align*}
+A \vec{v}_1 &= \begin{pmatrix}0&-1\\1&0\end{pmatrix} \begin{pmatrix}1\\-i\end{pmatrix}\\
+&= \begin{pmatrix}0 + i\\1 + 0\end{pmatrix}\\
+& = \begin{pmatrix}i\\1\end{pmatrix}\\
+& = i \begin{pmatrix}1\\-i\end{pmatrix}\\ 
+& = \lambda_1 \vec{v}_1.\\ 
+\end{align*}
+Therefore, we can conclude that $\vec{v}_1$ is an eigenvector of $A$ with eigenvalue $\lambda_1 = i$. Using the exact same method as above, we find that $$\vec{v}_2 = \begin{pmatrix}1\\i \end{pmatrix} \quad \text{and} \quad \lambda_2 = -i$$ are an eigenvector-eigenvalue pair because
+\begin{align*}
+A \vec{v}_2 &= \begin{pmatrix}0&-1\\1&0\end{pmatrix} \begin{pmatrix}1\\i\end{pmatrix}\\
+&= \begin{pmatrix}0 - i\\1 + 0\end{pmatrix}\\
+&= \begin{pmatrix}-i\\1\end{pmatrix}\\
+& = -i \begin{pmatrix}1\\i\end{pmatrix}\\ 
+& = \lambda_2 \vec{v}_2.\\ 
+\end{align*}
+This is what we wanted to show.
+\end{proof}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
