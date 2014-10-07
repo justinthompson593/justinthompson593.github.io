@@ -69,13 +69,13 @@ Suppose that $A \in \mathbb{R}^{2\times2}$ is given as above. We will first comp
 &= \lambda^2 +1.\\
 \end{align*}
 By definition of the characteristic equation, we set $\lambda^2 + 1 = 0$ and solve for $\lambda$. This gives us two eigenvalues, $\lambda_1 = i$ and $\lambda_2 = -i$. Now we must find nonzero vectors $\vec{v}_1$ and $\vec{v}_2$ which satisfy
-\begin{equation}\label{eq1}
+\begin{equation*}
 \left( A - \lambda I \right)\vec{v}_1 = \vec{0} \quad \text{and} \quad \left( A - \lambda I \right)\vec{v}_2 = \vec{0}.\\
-\end{equation}
+\end{equation*}
 Which is another way of saying
-\begin{equation}\label{eq2}
+\begin{equation*}
 A\vec{v}_1 = \lambda_1 \vec{v}_1 \quad \text{and} \quad A\vec{v}_2 = \lambda_2 \vec{v}_2.\\
-\end{equation}
+\end{equation*}
 
 To solve $A\vec{v}_1 = \vec{0}$, we let $\vec{v}_1 = \begin{pmatrix}x_1\\x_2\end{pmatrix}$ so that 
 \begin{align*}
@@ -83,8 +83,8 @@ To solve $A\vec{v}_1 = \vec{0}$, we let $\vec{v}_1 = \begin{pmatrix}x_1\\x_2\end
 \end{align*}
 This gives us the system of equations
 \begin{align*}
--\lambda_1 x_1 - x_2 = 0\\
-x_1 - \lambda_1 x_2 = 0.\\
+-\lambda_1 x_1 - x_2 &= 0\\
+x_1 - \lambda_1 x_2 &= 0.\\
 \end{align*}
 Since we're trying to find a \textit{nonzero} vector which satisfies both of these equations, I'll choose $x_1 = 1$ to make the calculations simple. Substituting $x_1 = 1$ into the first equation in our system gives $$-\lambda_1 - x_2 = 0$$ implying that $$x_2 = -\lambda_1.$$ We have to check that this solution works in the second equation before moving on. Substituting $x_1 = 1$ and $x_2 = -\lambda_1$ into the equation $x_1 - \lambda_1 x_2 = 0$ gives 
 \begin{align*}

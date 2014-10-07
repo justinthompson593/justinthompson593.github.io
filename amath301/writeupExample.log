@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  6 OCT 2014 17:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  6 OCT 2014 17:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -476,10 +476,10 @@ Non-PDF special ignored!
 Non-PDF special ignored!{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/upd
 map/pdftex.map}] [2] (./writeupExample.aux) ) 
 Here is how much of TeX's memory you used:
- 6551 strings out of 493315
- 98806 string characters out of 6137904
- 210947 words of memory out of 5000000
- 9878 multiletter control sequences out of 15000+600000
+ 6549 strings out of 493315
+ 98796 string characters out of 6137904
+ 210931 words of memory out of 5000000
+ 9876 multiletter control sequences out of 15000+600000
  11880 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,14n,53p,492b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -494,7 +494,7 @@ ype1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
 /public/amsfonts/symbols/msbm10.pfb>
-Output written on writeupExample.pdf (2 pages, 95882 bytes).
+Output written on writeupExample.pdf (2 pages, 95855 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
