@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  8 OCT 2014 08:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  8 OCT 2014 08:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -340,8 +340,7 @@ Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
 \pst@yunit=\dimen166
 )
 File: pst-plot.tex 2013/04/29 1.45 `pst-plot' (tvz,hv)
-)
-No file representations.aux.
+) (./representations.aux)
 \openout1 = `representations.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -356,6 +355,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -491,8 +491,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
 [2] [3] (./representations.aux) ) 
 Here is how much of TeX's memory you used:
- 6546 strings out of 493315
- 98761 string characters out of 6137904
+ 6548 strings out of 493315
+ 98801 string characters out of 6137904
  213931 words of memory out of 5000000
  9876 multiletter control sequences out of 15000+600000
  11871 words of font info for 50 fonts, out of 8000000 for 9000
@@ -509,7 +509,7 @@ amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on representations.pdf (3 pages, 98198 bytes).
+Output written on representations.pdf (3 pages, 98209 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream
