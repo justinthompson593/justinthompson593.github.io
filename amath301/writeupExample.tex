@@ -70,14 +70,14 @@ Suppose that $A \in \mathbb{R}^{2\times2}$ is given as above. We will first comp
 \end{align*}
 By definition of the characteristic equation, we set $\lambda^2 + 1 = 0$ and solve for $\lambda$. This gives us two eigenvalues, $\lambda_1 = i$ and $\lambda_2 = -i$. Now we must find nonzero vectors $\vec{v}_1$ and $\vec{v}_2$ which satisfy
 \begin{equation*}
-\left( A - \lambda I \right)\vec{v}_1 = \vec{0} \quad \text{and} \quad \left( A - \lambda I \right)\vec{v}_2 = \vec{0}.\\
+\left( A - \lambda_1 I \right)\vec{v}_1 = \vec{0} \quad \text{and} \quad \left( A - \lambda_2 I \right)\vec{v}_2 = \vec{0}.\\
 \end{equation*}
 Which is another way of saying
 \begin{equation*}
 A\vec{v}_1 = \lambda_1 \vec{v}_1 \quad \text{and} \quad A\vec{v}_2 = \lambda_2 \vec{v}_2.\\
 \end{equation*}
 
-To solve $A\vec{v}_1 = \vec{0}$, we let $\vec{v}_1 = \begin{pmatrix}x_1\\x_2\end{pmatrix}$ so that 
+To solve $\left(A - \lambda_1I\right)\vec{v}_1 = \vec{0}$, we let $\vec{v}_1 = \begin{pmatrix}x_1\\x_2\end{pmatrix}$ so that $\left(A - \lambda_1I\right)\vec{v}_1 = \vec{0}$ becomes
 \begin{align*}
 \begin{pmatrix}-\lambda_1&-1\\1&-\lambda_1\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix} = \begin{pmatrix}0\\0\end{pmatrix}.\\
 \end{align*}
