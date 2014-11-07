@@ -35,14 +35,14 @@
 % TITLE PAGE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \title{
-    \textmd{\Huge{Midterm A1}}\\
-    \textmd{\huge{Section 4}}
+    \textmd{\Huge{Midterm A2}}\\
+    \textmd{\huge{Section 2}}
 }
 
 
 \maketitle
 
-Consider the set of points $(-2, 2)$, $(0, 1)$ and $(2, 2)$ and the interpolating polynomial $f(x)$, which is a $2^\text{nd}$ degree polynomial that passes through those points. \\
+Consider the set of points $(-2, 3)$, $(0, 2)$ and $(2, 3)$ and the interpolating polynomial $f(x)$, which is a $2^\text{nd}$ degree polynomial that passes through those points. \\
 
 \textbf{Problem 1} [5pt]: If $f(x)$ is written as $\a x^2 + \b x + \c$, write down the linear system to be solved to obtain $\a$, $\b$ and $\c$. \\
 
@@ -59,9 +59,9 @@ y_3 &= f(x_3) = \a x_3^2 + \b x_3 + \c  \\
 Knowing that I'm looking for a linear system of equations, and knowing that \textit{linear system of equations} is a fancy way of saying \textit{matrix equation}, I'm going to rewrite it like this when I substitute the $(x_i, y_i)$'s back in. 
 
 \begin{align*}
- \a (-2)^2 - \b 2 + \c &= 2 \\
- \a 0^2 + \b 0 + \c &= 1 \numberthis \\
- \a 2^2 + \b 2 + \c &= 2 \\
+ \a (-2)^2 - \b 2 + \c &= 3 \\
+ \a 0^2 + \b 0 + \c &= 2 \numberthis \\
+ \a 2^2 + \b 2 + \c &= 3 \\
 \end{align*}
 
 If you weren't on facespace while the AMATH 301 lectures were playing dimly in the background, you'll probably recognize that (2) can be rewritten in fancy form like this.
@@ -69,7 +69,7 @@ If you weren't on facespace while the AMATH 301 lectures were playing dimly in t
 \[
 \begin{pmatrix} (-2)^2 & -2 & 1 \\ 0^2 & 0 & 1 \\ 2^2 & 2 & 1\\ \end{pmatrix}
 \begin{pmatrix} \a \\ \b \\ \c \\ \end{pmatrix} = 
-\begin{pmatrix} 2 \\ 1 \\ 2 \\ \end{pmatrix} \numberthis
+\begin{pmatrix} 3 \\ 2 \\ 3 \\ \end{pmatrix} \numberthis
 \] 
 
 And if you're really on your game, you can do this.
@@ -77,7 +77,7 @@ And if you're really on your game, you can do this.
 \[
 \begin{pmatrix} 4 & -2 & 1 \\ 0 & 0 & 1 \\ 4 & 2 & 1\\ \end{pmatrix}
 \begin{pmatrix} \a \\ \b \\ \c \\ \end{pmatrix} = 
-\begin{pmatrix} 2 \\ 1 \\ 2 \\ \end{pmatrix} \numberthis
+\begin{pmatrix} 3 \\ 2 \\ 3 \\ \end{pmatrix} \numberthis
 \] 
 
 I awarded 5 points if you proved to me that you knew what you were doing. If you wrote down (2), (3), or (4), then you nailed it. Note that something along these lines 
@@ -88,7 +88,7 @@ y_2 &=  \a x_2^2 + \b x_2 + \c \\
 y_3 &=  \a x_3^2 + \b x_3 + \c  \\
 \end{align*}
 \[
-\text{where} \;\; \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} -2 \\ 0 \\ 2 \end{pmatrix} \;\; \text{and} \;\; \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = \begin{pmatrix} 2 \\ 1 \\ 2 \end{pmatrix}
+\text{where} \;\; \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} -2 \\ 0 \\ 2 \end{pmatrix} \;\; \text{and} \;\; \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = \begin{pmatrix} 3 \\ 2 \\ 3 \end{pmatrix}
 \] \\
 
 {\setlength{\parindent}{0cm}
@@ -97,7 +97,7 @@ would be a perfectly good answer because it would \textit{prove to me} that you 
 \textbf{Problem 2} [10pt]: The system above can be row-reduced to the following system:
 
 \[
-\begin{pmatrix} 4 & -2 & 1 \\ 0 & 4 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} \a \\ \b \\ \c \end{pmatrix} = \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix}
+\begin{pmatrix} 4 & -2 & 1 \\ 0 & 4 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} \a \\ \b \\ \c \end{pmatrix} = \begin{pmatrix} 3 \\ 2 \\ 3 \end{pmatrix}
 \]
 
 Solve this system for $\a$, $\b$, and $\c$.\\
