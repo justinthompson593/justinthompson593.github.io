@@ -6,7 +6,10 @@
 \usepackage{amsmath,amsthm,amssymb}
  \usepackage{graphicx}
  \usepackage{enumerate}
+ \usepackage{color}
+ \usepackage{hyperref}
  
+ \hypersetup{urlcolor=cyan}
  
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -94,7 +97,7 @@ y_3 &=  \a x_3^2 + \b x_3 + \c  \\
 \text{where} \;\; \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} -2 \\ 0 \\ 2 \end{pmatrix} \;\; \text{and} \;\; \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = \begin{pmatrix} 2 \\ 1 \\ 2 \end{pmatrix}
 \] \\
 
-because it would \textit{prove to me} that you know what you're doing. I'm surprised nobody tried that. \\
+because it would \textit{prove to me} that you know what you're doing. I'm surprised nobody tried that. Finally, I'd like to mention that if you don't \text{immediately} recognize the $3 \times 3$ matrix above as a Vandermonde matrix, go {\color{cyan} \href{http://en.wikipedia.org/wiki/Vandermonde_matrix}{here}}. Notice that they mention that "some authors use the transpose." Other authors (like ours) do it differently.\\
 
 \textbf{Problem 2} [10pt]: The system above can be row-reduced to the following system:
 
@@ -104,10 +107,16 @@ because it would \textit{prove to me} that you know what you're doing. I'm surpr
 
 Solve this system for $\a$, $\b$, and $\c$.\\
 
-When all else fails, just play with the given information. Get it into a new form which
+When all else fails, just play with the given information. Get it into a new form. Sometimes it helps to look at things in a different light. We can matrix-multiply the equation above to get
 
 
+\begin{align*}
+4 \a - 2 \b + \c &= 2 \\
+4 \b &= 0 \\
+\c & = 1
+\end{align*}
 
+\textbf{Stop!} What does $4 \b = 0$ mean? Well, if you take 4, multiply it by something and get 0, that something \textit{must} be 0. So the equation $4 \b = 0$ implies $\b = 0$. 
 
 \end{document}
 
