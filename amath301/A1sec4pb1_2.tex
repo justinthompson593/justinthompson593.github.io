@@ -48,13 +48,7 @@ Consider the set of points $(-2, 2)$, $(0, 1)$ and $(2, 2)$ and the interpolatin
 
 Before anything, I do a quick sketch to see what's going on. \hspace*{3cm}\includegraphics[scale=0.5]{thumbSketch}\\
 
-Then I write down my given information.
-
-\[
-f(x) = \a x^2 + \b x + \c 
-\]
-
-Then I realize that this question is asking me to write down a system of equations, not find the scalar values $\a$, $\b$ and $\c$. Make note that these equations must be \textit{linear}. What are three equations I can write with the given information? There's only one thing I can do, really. I have three points and an equation. So I'm just going to plug each given $x$ value in and equate that with its $y$ value like this.
+Then I realize that this question is asking me to write down a system of equations, not find the scalar values $\a$, $\b$ and $\c$. Make note that these equations must be \textit{linear}. I have three points and an equation. There's only one thing I can do, really. What are three equations I can write with the given information? So I'm just going to plug each given $x$ value in and equate that with its $y$ value like this.
 
 \begin{align*}
 y_1 &= f(x_1) = \a x_1^2 + \b x_1 + \c \\
@@ -97,7 +91,7 @@ y_3 &=  \a x_3^2 + \b x_3 + \c  \\
 \text{where} \;\; \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} -2 \\ 0 \\ 2 \end{pmatrix} \;\; \text{and} \;\; \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = \begin{pmatrix} 2 \\ 1 \\ 2 \end{pmatrix}
 \] \\
 
-because it would \textit{prove to me} that you know what you're doing. I'm surprised nobody tried that. Finally, I'd like to mention that if you don't \text{immediately} recognize the $3 \times 3$ matrix above as a Vandermonde matrix, go {\color{cyan} \href{http://en.wikipedia.org/wiki/Vandermonde_matrix}{here}}. Notice that they mention that "some authors use the transpose." Other authors (like ours) do it differently.\\
+because it would \textit{prove to me} that you know what you're doing. I'm surprised nobody tried that. Finally, I'd like to mention that if you don't \text{immediately} recognize the $3 \times 3$ matrix above as a Vandermonde matrix, go {\color{cyan} \underline{\href{http://en.wikipedia.org/wiki/Vandermonde_matrix}{here}}}. Notice that they mention that "some authors use the transpose." Other authors (like ours) do it differently.\\
 
 \textbf{Problem 2} [10pt]: The system above can be row-reduced to the following system:
 
@@ -116,7 +110,16 @@ When all else fails, just play with the given information. Get it into a new for
 \c & = 1
 \end{align*}
 
-\textbf{Stop!} What does $4 \b = 0$ mean? Well, if you take 4, multiply it by something and get 0, that something \textit{must} be 0. So the equation $4 \b = 0$ implies $\b = 0$. 
+\textbf{Stop!} What does $4 \b = 0$ mean? Well, if you take 4, multiply it by something and get 0, that something \textit{must} be 0. So the equation $4 \b = 0$ implies $\b = 0$. Always be on the lookout for zeros; they (usually) make things a lot easier. From here, we see that since $\b = 0$ and $\c = 1$, we can substitute into the first equation to get
+
+\begin{align*}
+4 \a - 2 \b + \c &= 2 \\
+4 \a - 2 (0) + 1 &= 2 \\
+4 \a &= 1 \\
+\a &= \frac{1}{4}
+\end{align*}
+
+You could have 
 
 \end{document}
 
