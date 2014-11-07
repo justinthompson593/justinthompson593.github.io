@@ -56,10 +56,38 @@ Now that we got that out of the way, let's think of how we write a Lagrangian po
 f(x)  = y_1 \frac{(x - x_2)(x - x_3)}{(x_1 - x_2)(x_1 - x_3)} + y_2 \frac{(x - x_1)(x - x_3)}{(x_2 - x_1)(x_2 - x_3)} + y_3 \frac{(x - x_1)(x - x_2)}{(x_3 - x_1)(x_3 - x_2)} \numberthis
 \] \\
 
-Notice how nicely the "$ - \, x_i $" terms look stacked on top of each other like that. In the first fraction we have $x_2$ right over $x_2$ and the $x_3$ over the $x_3$. The situation is similar for the other two fractions. Also notice that $f$ is a function of $x$. There are two $x$'s in each numerator. Some people made the mistake of substituting point values in for the $x$'s in (1). That's not good. Suppose we didn't have any $x$'s in our expression. Then (1) would just be a sum of constants, giving you some scalar $C$.  You'd have $f(x) = C$, and there's \textit{no way} that $f(x)$ could go through the 3 points I drew horribly up top. One other thing to note is that we're given 3 points, and we have 3 expressions in (1). Look at where the $y_1$ and $x_1$'s appear in the first fraction. Look at how similar that is to $y_2$ and the $x_2$'s in the second fraction. \\
+Notice how nicely the "$ - \, x_i $" terms look stacked on top of each other like that. In the first fraction we have $x_2$ right over $x_2$ and the $x_3$ over the $x_3$. The situation is similar for the other two fractions. Also notice that $f$ is a function of $x$. There are two $x$'s in each numerator. Some people made the mistake of substituting point values in for the $x$'s in (1). That's not good. Suppose we didn't have any $x$'s in our expression. Then (1) would just be a sum of constants, giving you some scalar $C$.  You'd have $f(x) = C$, and there's \textit{no way} that $f(x)$ could go through the 3 points I drew horribly up top. \\
 
-Let's take a second to think about how we could generalize (1) a little. That is, suppose we were given 4 points, $(x_1, y_1)$, $(x_2, y_2)$, $(x_3, y_3)$, and $(x_4, y_4)$. 
+Also, notice that our sketch implies that if we multiply out (1) to get some expression $f(x) = \a x^2 + \b x + \c$, then $\a$ better be nonzero and positive. This \textbf{can not} happen if we don't have two $x$'s in the numerators. One other thing to note is that we're given 3 points, and we have 3 expressions in (1). Look at where the $y_1$ and $x_1$'s appear in the first fraction. Look at how similar that is to $y_2$ and the $x_2$'s in the second fraction. \\
 
+Let's take a second to think about how we could generalize (1) a little. That is, suppose we were given four points, $(x_1, y_1)$, $(x_2, y_2)$, $(x_3, y_3)$, and $(x_4, y_4)$ and we want a corresponding Lagrangian polynomial $g(x)$. Without knowing "the formula" for a $4^\text{th}$ order Lagrangian polynomial, I'm just going to set it up the way (1) is set up: \\
+
+\[
+g(x)  = y_1 \frac{(x - x_2)(x - x_3)}{(x_1 - x_2)(x_1 - x_3)} + y_2 \frac{(x - x_1)(x - x_3)}{(x_2 - x_1)(x_2 - x_3)} + y_3 \frac{(x - x_1)(x - x_2)}{(x_3 - x_1)(x_3 - x_2)}  + y_4 \frac{(x - ?)(x - ?)}{(x_4 - ?)(x_4 - ?)} 
+\] \\
+
+If three points determines a $2^\text{nd}$ order polynomial, it makes sense that four points determine a $3^\text{rd}$ order polynomial. Then we'll need something like this $(x - a)(x- b)(x-c)$ in each numerator. \\
+
+\[
+g(x)  = y_1 \frac{(x - x_2)(x - x_3)(x - ?)}{(x_1 - x_2)(x_1 - x_3)} + y_2 \frac{(x - x_1)(x - x_3)(x - ?)}{(x_2 - x_1)(x_2 - x_3)} + y_3 \frac{(x - x_1)(x - x_2)(x - ?)}{(x_3 - x_1)(x_3 - x_2)}  + y_4 \frac{(x - ?)(x - ?)(x - ?)}{(x_4 - ?)(x_4 - ?)} 
+\] \\
+
+By analogy, I'm assuming there must also be extra terms in the denominator. Note that the first $x_i$ in each denominator agrees with the $y_i$ in (1). We'll do the same thing here.\\
+
+\[
+g(x)  = y_1 \frac{(x - x_2)(x - x_3)(x - ?)}{(x_1 - x_2)(x_1 - x_3)(x_1 - ?)} + y_2 \frac{(x - x_1)(x - x_3)(x - ?)}{(x_2 - x_1)(x_2 - x_3)(x_2 - ?)} + y_3 \frac{(x - x_1)(x - x_2)(x - ?)}{(x_3 - x_1)(x_3 - x_2)(x_3 - ?)}  + y_4 \frac{(x - ?)(x - ?)(x - ?)}{(x_4 - ?)(x_4 - ?)(x_4 - ?)} 
+\] \\
+
+Now we just fill in the $?$'s in the obvious way, taking care not to \textit{ever} divide by zero. \textit{Ever}.
+
+\begin{align*}
+g(x)  = &y_1 \frac{(x - x_2)(x - x_3)(x - x_4)}{(x_1 - x_2)(x_1 - x_3)(x_1 - x_4)} + y_2 \frac{(x - x_1)(x - x_3)(x - x_4)}{(x_2 - x_1)(x_2 - x_3)(x_2 - x_4)} +  \\
+& y_3 \frac{(x - x_1)(x - x_2)(x - x_4)}{(x_3 - x_1)(x_3 - x_2)(x_3 - x_4)}  + y_4 \frac{(x - x_1)(x - x_2)(x - x_3)}{(x_4 - x_1)(x_4 - x_2)(x_4 - x_3)} 
+\end{align*}
+
+And we've just blindly derived the general form of a $4^\text{th}$ order Lagrangian polynomial by reason and analogy alone. My point with this is that if you know the formula for a $1^\text{st}$ order Lagrangian polynomial given two points, then you have the resources to figure out the formula for a $2^\text{nd}$ order Lagrangian polynomial, given 3 points. You just have to be a little creative and notice the patterns. \\
+
+Back to the  
 
 \end{document}
 
