@@ -78,7 +78,7 @@ By analogy, I'm assuming there must also be extra terms in the denominator. Note
 g(x)  = y_1 \frac{(x - x_2)(x - x_3)(x - ?)}{(x_1 - x_2)(x_1 - x_3)(x_1 - ?)} + y_2 \frac{(x - x_1)(x - x_3)(x - ?)}{(x_2 - x_1)(x_2 - x_3)(x_2 - ?)} + y_3 \frac{(x - x_1)(x - x_2)(x - ?)}{(x_3 - x_1)(x_3 - x_2)(x_3 - ?)}  + y_4 \frac{(x - ?)(x - ?)(x - ?)}{(x_4 - ?)(x_4 - ?)(x_4 - ?)} 
 \] \\
 
-Now we just fill in the $?$'s in the obvious way, taking care not to \textit{ever} divide by zero. \textit{Ever}.
+Now we just fill in the $?$'s in the obvious way, taking care not to \textit{ever} divide by zero \dots \textit{ever}.
 
 \begin{align*}
 g(x)  = &y_1 \frac{(x - x_2)(x - x_3)(x - x_4)}{(x_1 - x_2)(x_1 - x_3)(x_1 - x_4)} + y_2 \frac{(x - x_1)(x - x_3)(x - x_4)}{(x_2 - x_1)(x_2 - x_3)(x_2 - x_4)} +  \\
@@ -87,7 +87,51 @@ g(x)  = &y_1 \frac{(x - x_2)(x - x_3)(x - x_4)}{(x_1 - x_2)(x_1 - x_3)(x_1 - x_4
 
 And we've just blindly derived the general form of a $4^\text{th}$ order Lagrangian polynomial by reason and analogy alone. My point with this is that if you know the formula for a $1^\text{st}$ order Lagrangian polynomial given two points, then you have the resources to figure out the formula for a $2^\text{nd}$ order Lagrangian polynomial, given 3 points. You just have to be a little creative and notice the patterns. \\
 
-Back to the  
+Back to the problem. Technically, you could write this
+
+\[
+f(x)  = y_1 \frac{(x - x_2)(x - x_3)}{(x_1 - x_2)(x_1 - x_3)} + y_2 \frac{(x - x_1)(x - x_3)}{(x_2 - x_1)(x_2 - x_3)} + y_3 \frac{(x - x_1)(x - x_2)}{(x_3 - x_1)(x_3 - x_2)} 
+\]
+\[
+\text{where} \quad \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}  = \begin{pmatrix} -2 \\ 1 \\ 2 \end{pmatrix} \quad \text{and} \quad  \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix}  = \begin{pmatrix} 2 \\ 1 \\ 2 \end{pmatrix} \numberthis
+\] \\
+
+{\setlength{\parindent}{0cm}
+and it would be a perfectly good answer. I'm surprised nobody tried that. Some people did this}\\
+
+\[
+f(x)  = 2 \frac{(x - 1)(x - 2)}{(-2  - 1)(-2  - 2)} + 1 \frac{(x + 2)(x - 2)}{(1 + 2)(1 - 2)} + 2 \frac{(x + 2)(x - 1)}{(2 + 2)(2 - 1)} \numberthis \\
+\] \\
+
+{\setlength{\parindent}{0cm}
+and I thanked you for it. Most people reduced the denominators like this} \\
+
+\[
+f(x)  = 2 \frac{(x - 1)(x - 2)}{12} + 1 \frac{(x + 2)(x - 2)}{-3} + 2 \frac{(x + 2)(x - 1)}{4} \numberthis \\
+\] \\
+
+{\setlength{\parindent}{0cm}
+or this} \\
+
+\[
+f(x)  =  \frac{(x - 1)(x - 2)}{6} -  \frac{(x + 2)(x - 2)}{3} + \frac{(x + 2)(x - 1)}{2} \numberthis \\
+\] \\
+
+{\setlength{\parindent}{0cm}
+and it was only mildly annoying. Of course, if you were really high-speed, you did this} \\
+
+\begin{align*}
+f(x)  &=  \frac{(x - 1)(x - 2)}{6} -  \frac{(x + 2)(x - 2)}{3} + \frac{(x + 2)(x - 1)}{2} \\
+&= \frac{x^2 - 3 x +2}{6} - \frac{x^2  - 4}{3} + \frac{x^2 + x - 2}{2} \\
+&= \left( \frac{1}{6} - \frac{1}{3} + \frac{1}{2} \right) x^2 + \left( -\frac{3}{6} + \frac{1}{2} \right) x + \left( \frac{2}{6} + \frac{4}{3} - \frac{2}{2} \right) \numberthis \\
+&= \frac{1}{3} x^2 + 0 x + \frac{2}{3} \\
+&= \frac{1}{3} x^2 + \frac{2}{3} 
+\end{align*}\\
+
+{\setlength{\parindent}{0cm}
+and you ended up doing way more work than necessary. However, now we have $f(x)$ in the form $f(x) = \a x^2 + \b x + \c$, where $\a > 0$ just as we expected. At least if you went this far, you can double-check that your result (i.e. $f(x) = x^2 / 3 + 2 / 3$) is consistent with the sketch. }\\
+
+If you wrote anything like (2) through (6) above, then you should have been awarded 15 points. If you wrote down the general formula (1), then you more or less solved the problem. I need to know, however, that you know \textit{which} points go into each $x_i$ and $y_i$.
 
 \end{document}
 
