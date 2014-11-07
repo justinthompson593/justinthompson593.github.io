@@ -97,7 +97,7 @@ would be a perfectly good answer because it would \textit{prove to me} that you 
 \textbf{Problem 2} [10pt]: The system above can be row-reduced to the following system:
 
 \[
-\begin{pmatrix} 4 & -2 & 1 \\ 0 & 4 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} \a \\ \b \\ \c \end{pmatrix} = \begin{pmatrix} 3 \\ 2 \\ 3 \end{pmatrix}
+\begin{pmatrix} 4 & -2 & 1 \\ 0 & 4 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} \a \\ \b \\ \c \end{pmatrix} = \begin{pmatrix} 3 \\ 0 \\ 2 \end{pmatrix}
 \]
 
 Solve this system for $\a$, $\b$, and $\c$.\\
@@ -106,32 +106,32 @@ When all else fails, just play with the given information. Get it into a new for
 
 
 \begin{align*}
-4 \a - 2 \b + \c &= 2 \\
+4 \a - 2 \b + \c &= 3 \\
 4 \b &= 0 \\
-\c & = 1
+\c & = 2
 \end{align*}
 
-\textbf{Stop!} What does $4 \b = 0$ mean? Well, if you take 4, multiply it by something and get 0, that something \textit{must} be 0. So the equation $4 \b = 0$ implies $\b = 0$. Always be on the lookout for zeros; they (usually) make things a lot easier. From here, we see that since $\b = 0$ and $\c = 1$, we can substitute into the first equation to get
+\textbf{Stop!} What does $4 \b = 0$ mean? Well, if you take 4, multiply it by something and get 0, that something \textit{must} be 0. So the equation $4 \b = 0$ implies $\b = 0$. Always be on the lookout for zeros; they (usually) make things a lot easier. From here, we see that since $\b = 0$ and $\c = 2$, we can substitute into the first equation to get
 
 \begin{align*}
-4 \a - 2 \b + \c &= 2 \\
-4 \a - 2 (0) + 1 &= 2 \\
+4 \a - 2 \b + \c &= 3 \\
+4 \a - 2 (0) + 2 &= 3 \\
 4 \a &= 1 \\
 \a &= \frac{1}{4}
 \end{align*}
 
-You could have done this with the powerful tools of linear algebra (i.e. back substitution, \dots ), but these tools are a bit \textit{too} powerful for this problem. Notice that the $3 \times 3$ matrix is $44.444\dots$\% zeros. Again, zeros are our friends in this case. If you understand that a matrix and a system of equations are \textit{\textbf{the same thing}}, then a quick glance at 
+You could have done this with the powerful tools of linear algebra (i.e. row operations, back substitution, \dots ), but these tools are a bit \textit{too} powerful for this problem. Notice that the $3 \times 3$ matrix is $44.444\dots$\% zeros. Again, zeros are our friends in this case. If you understand that a matrix and a system of equations are \textit{\textbf{the same thing}}, then a quick glance at 
 
 \[
-\begin{pmatrix} 4 & -2 & 1 \\ 0 & 4 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} \a \\ \b \\ \c \end{pmatrix} = \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix}
+\begin{pmatrix} 4 & -2 & 1 \\ 0 & 4 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} \a \\ \b \\ \c \end{pmatrix} = \begin{pmatrix} 3 \\ 0 \\ 2 \end{pmatrix}
 \]
 
 {\setlength{\parindent}{0cm}
-tells us that $\b = 0$ and $\c = 1$. From there you can do the rest in your head since the top row reduces nicely to $4 \a + 1 = 2$, so that $\a = 1/4$. If you were so inclined, you could just write
+tells us that $\b = 0$ and $\c = 2$. From there you can do the rest in your head since the top row reduces nicely to $4 \a + 2 = 3$, so that $\a = 1/4$. If you were so inclined, you could just write
 }
 
 \[
-\a = \frac{1}{4} \quad \b = 0 \quad \c = 1
+\a = \frac{1}{4} \quad \b = 0 \quad \c = 2
 \]
 
 {\setlength{\parindent}{0cm}
