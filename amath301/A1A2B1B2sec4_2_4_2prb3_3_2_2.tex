@@ -11,6 +11,16 @@
  
  \hypersetup{urlcolor=cyan}
  
+
+  \usepackage{mcode}
+ \usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+ 
+ \lstset{basicstyle=\fontsize{12}{12}\selectfont\ttfamily}
+ 
+ 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 
@@ -58,15 +68,13 @@
 Okay. This is a \textit{very} tricky problem. When I sat down to take this exam, I almost missed this one completely. In the previous problem, you either wrote the function $f(x)$ as a linear system (A1 / A2) or you found a Lagrangian polynomial named $f(x)$  (B1 / B2). In any case, you've done a lot of work to accurately describe $f(x)$. If this problem were stated like this \\
 \\
 
-\textbf{Problem 2 / 3} [10pt]: Finish the following MATLAB function named "evaluateF." For input: $g$ is a function so that $g(t_j)$ returns the value of \textbf{an} interpolating polynomial at $t_j$ and $t$ is a row vector of values. For output: $y$ is a row vector of the values $g(t_j)$ for each element in $t$. Assume that $g(x_j)$ only accepts one value at a time.\\
+\textbf{Problem 2 / 3} [10pt]: Finish the following MATLAB function named "evaluateF." For input: $g$ is a function so that $g(t_j)$ returns the value of \textbf{an} interpolating polynomial at $t_j$ and $t$ is a row vector of values. For output: $y$ is a row vector of the values $g(t_j)$ for each element in $t$. Assume that $g(x_j)$ only accepts one value at a time.
 
-\textbf{function} y = evaluateF($g$, $t$)\\
-\\
-\\
-\\ 
-\\ 
+\lstinputlisting{func.m} 
 
-\textbf{end} \\
+
+{\setlength{\parindent}{0cm}
+then what we were asking may have been a bit more clear. The first part of solving this problem is recognizing that }\\
 
 
 \end{document}
