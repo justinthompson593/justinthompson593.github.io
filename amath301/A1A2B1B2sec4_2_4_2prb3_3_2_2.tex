@@ -65,7 +65,7 @@
 \\
 
 
-Okay. This is a \textit{very} tricky problem. When I sat down to take this exam, I almost missed this one completely. In the previous problem, you either wrote the function $f(x)$ as a linear system (A1 / A2) or you found a Lagrangian polynomial named $f(x)$  (B1 / B2). In any case, you've done a lot of work to accurately describe $f(x)$. If this problem were stated like this \\
+This is a \textit{very} tricky problem. When I sat down to take this exam, I almost missed this one completely. In the previous problem, you either wrote the function $f(x)$ as a linear system (A1 / A2) or you found a Lagrangian polynomial named $f(x)$  (B1 / B2). In any case, you've done a lot of work to accurately describe $f(x)$. If this problem were stated like this \\
 \\
 
 \textbf{Problem 2 / 3} [10pt]: Finish the following MATLAB function named "evaluateF." For input: $g$ is a function so that $g(t_j)$ returns the value of \textbf{an} interpolating polynomial at $t_j$ and $t$ is a row vector of values. For output: $y$ is a row vector of the values $g(t_j)$ for each element in $t$. Assume that $g(x_j)$ only accepts one value at a time.
@@ -74,7 +74,9 @@ Okay. This is a \textit{very} tricky problem. When I sat down to take this exam,
 
 
 {\setlength{\parindent}{0cm}
-then what we were asking may have been a bit more clear. The first part of solving this problem is recognizing that }\\
+then what we were asking may have been a bit more clear. The first part of solving this problem is recognizing that the $f$ in this problem is \textit{not necessarily} the same $f$ from the last problem. With that in mind, let's look back over the statement of \textbf{Problem 2 / 3} so that we can identify all of our given information, and decipher what output we want to produce.}\\
+
+The problem statement tells us that we are given two input variables. One is a function $f$ which takes only one value at a time, the other is a row vector, $x$. Since $f$ takes only one value at a time, we can't do this $f([1, 2])$, or this $f([x_1, x_2, x_3])$, or this $f([x_1, x_2, \dots, x_n])$, or so on. The best we can hope to do is throw one value into $f$ at a time, like this $f(1), f(2)$, or this $f(x_1), f(x_2), f(x_3)$, or this, $f(x_1), f(x_2), \dots, f(x_n)$.
 
 
 \end{document}
