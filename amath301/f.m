@@ -1,4 +1,4 @@
-function [ out ] = f( x )
+function out  = f( x )
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %   FUNCTION:    f(x)
 %
@@ -6,13 +6,12 @@ function [ out ] = f( x )
 %                      scalar value with
 %                      positive real part
 %
-%     OUTPUT:    out   Gamma(x)
+%     OUTPUT:    out   Gamma(x+1)
 %
 %DESCRIPTION:
 %
-% Given a scalar, real-valued number x, f(x) 
-% returns the value of the Gamma function 
-% evaluated at x. 
+% Given a scalar, x, f(x) returns the value 
+% of the Gamma function evaluated at x+1. 
 %
 % The Gamma function is the continuous 
 % extension of the factorial function to real
@@ -54,7 +53,7 @@ function [ out ] = f( x )
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-out = integral(@(t) t.^(x-1).*exp(-t),0,Inf);
+out = integral(@(t) t.^(x).*exp(-t),0,Inf);
 
 end
 

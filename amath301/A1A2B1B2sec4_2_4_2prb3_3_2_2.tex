@@ -116,10 +116,23 @@ y = [f(x_1), f(x_2), \dots, f(x_m)].
 
 How big is $m$? Well, it could be $1$. It could be $2$. It could be $2^{16}-1$. \textit{We don't know how large} $m$ \textit{is}. The only thing we \textit{do} know is that $m$ is the length of $x$. On page 2 of the exam, you were given the MATLAB command \texttt{size(x)}. The exam states that for a vector \texttt{x}, we have $D = \;$\texttt{size(x)} , where $D$ is the number of elements in \texttt{x}. This is actually inaccurate. If \texttt{x} is a vector or matrix (of any size), then $D = \;$\texttt{size(x)}, where $D$ is a $1 \times 2$ row vector, whose entries are the dimensions of \texttt{x}. \\
 
-For example, suppose \\
+Earlier, I noted that we did a lot of work in the previous problem in order to get information about some $f(x)$, and that the $f$ in this problem is not \textit{necessarily} the same $f$. Maybe your boss gave you some data and told you to work on getting an $f$ to fit that data. Then later that morning, you get an email from your boss with a vector $x$ and some function $f$ with some weird stipulations on it. It may or may not have anything to do with the $f$ that she told you to work on earlier! I agree that this is a very tricky problem, but that is precisely the point. Computational science and math require careful attention to detail.\\
+
+Suppose that this is the mysterious $f$, which happens to have nothing to do with your previous work.\\
 
 \lstinputlisting{f.m}
 
+I urge you to either (a) copy and paste everything (except the page number) from "\texttt{function out =}\dots" all the way to "\texttt{end}" into a blank file. Name this file "f.m" and make sure it is in your current working directory or (b) in your MATLAB environment, select the drop down arrow under "New" and select "Function." Once you do that, a new file titled \texttt{untitledN.m} will appear. \texttt{N} will depend on the number of untitled files you're currently working on. If you have none, then your file will be named "\texttt{untitled.m}" and will look like this.
+
+\lstinputlisting{untitled.m}
+
+{\setlength{\parindent}{0cm}
+From here, you can change your new file to look like the one I made. You only have to copy and paste one line and change the first line a little. A MATLAB function must have the same filename as the function name. If you've changed \texttt{untitled} to \texttt{f}, then when you go to save the file, MATLAB will already suggest that its name should be \text{f.m}. If you changed the top line so that it reads "\texttt{function out = myWickedCoolFunction( x )}, then MATLAB will suggest that its name should be \texttt{myWickedCoolFunction.m}, and so on. You need to name the file so that the two names are the same. So if I did this}
+
+\lstinputlisting{continuousFactorial.m}
+
+{\setlength{\parindent}{0cm}
+then I would need to make sure I save my file as \texttt{continuousFactorial.m}} But let's move on as though you've saved your function as \texttt{f.m}. Making sure that the file \texttt{f.m} is in your Current Folder (one of the windows in the MATLAB environment), also called your current or working directory, then you can type \texttt{f(3)} into the command window. The returned value should be $6.000$, if you're only showing 4 decimal places. You can type \texttt{format long} into the command window, hit return, then type \texttt{f(3)} again. You'll see that this is a \textit{very} good numerical approximation to the true value, $3! = 6$. Now try this. Define a vector $x$ by typing \texttt{x = 0:0.01:3;} Then try \texttt{f(x)} and you'll get all kinds of scary errors. This is what we mean by "$f(x_j)$ only accepts one value at a time."\\
 
 Think about the utility of having a function which can take a vector \textit{of any} length.
 
