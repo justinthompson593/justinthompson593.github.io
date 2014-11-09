@@ -110,11 +110,17 @@ and we want}
 
 \[
 y = [f(x_1), f(x_2), \dots, f(x_m)].
-\] \\
+\] 
 
-\textbf{Stop!} Did we get all of the information we need from the problem statement? I think so. The two relations above describe the entire problem. We have a row vector with $m$ entries and we want to construct a row vector $y$ with $m$ entries. So we're ready to move on.\\ 
+\textbf{Stop!} Did we get all of the information we need from the problem statement? I think so. The two relations above describe the entire problem. We have a row vector with $m$ entries and we want to construct a row vector $y$ with $m$ entries. \\ 
 
-How big is $m$? Well, it could be $1$. It could be $2$. It could be $2^{16}-1$. \textit{We don't know how large} $m$ \textit{is}. The only thing we \textit{do} know is that $m$ is the length of $x$. On page 2 of the exam, you were given the MATLAB command \texttt{size(x)}. The exam states that for a vector \texttt{x}, we have $D = \;$\texttt{size(x)} , where $D$ is the number of elements in \texttt{x}. This is actually inaccurate. If \texttt{x} is a vector or matrix (of any size), then $D = \;$\texttt{size(x)}, where $D$ is a $1 \times 2$ row vector, whose entries are the dimensions of \texttt{x}. \\
+How big is $m$? Well, it could be $1$. It could be $2$. It could be $2^{16}-1$. \textit{We don't know how large} $m$ \textit{is}. The only thing we \textit{do} know is that $m$ is the number of elements in $x$. On page 2 of the exam, you were given the MATLAB command \texttt{size(x)}. The exam states that for a vector \texttt{x}, we have \texttt{D = size(x)} , where \texttt{D} is the number of elements in \texttt{x}. This is actually inaccurate. If \texttt{x} is a vector or matrix (of any size), then \texttt{D = size(x)}, where \texttt{D} is a $1 \times 2$ row vector, whose entries are the dimensions of \texttt{x}. For example, suppose that \texttt{x} is the row vector given by \texttt{x = [1, 3, 5, 7]}. Then \texttt{x} is $1 \times 4$, so that \texttt{D = [1, 4] = size(x)}. If \texttt{x} were a matrix given by \texttt{x = [1, 2, 3; 4, 5 6]}, then \text{x} is $2 \times 3$ so that \texttt{D = [2, 3] = size(x)}. There is a function, \texttt{length}, which has the property that if \texttt{x} is is a row vector or a column vector, then \texttt{L = length(x)} where \texttt{L} is the number of elements in \texttt{x}. We'll come back to this below. \\
+
+ Okay. Let's consider our "given" vector $x = [x_1, x_2, \dots, x_m]$. There are two ways to get the value $m$ from $x$ by using the function \texttt{size}. One way it to assign \texttt{size(x)} to a variable like this $D = \;$\texttt{size(x)}. Then $[1, m] = D$, so that $m = D(2)$, or equivalently, $m = D(1,2)$. A better way to access this number is by throwing a second argument into \texttt{size}. Since we know that $x$ is a row vector, then we want its second dimension for $m$. To do this, we can write $m = \;$\texttt{size(x,2)}. If we wanted to assign the first dimension of $x$ a variable named $n$, we would write $n = \;$\texttt{size(x,1)}.\\
+
+
+
+
 
 Earlier, I noted that we did a lot of work in the previous problem in order to get information about some $f(x)$, and that the $f$ in this problem is not \textit{necessarily} the same $f$. Maybe your boss gave you some data and told you to work on getting an $f$ to fit that data. Then later that morning, you get an email from your boss with a vector $x$ and some function $f$ with some weird stipulations on it. It may or may not have anything to do with the $f$ that she told you to work on earlier! I agree that this is a very tricky problem, but that is precisely the point. Computational science and math require careful attention to detail.\\
 
