@@ -76,7 +76,7 @@ This is a \textit{very} tricky problem. When I sat down to take this exam, I alm
 {\setlength{\parindent}{0cm}
 then what we were asking may have been a bit more clear. The first part of solving this problem is recognizing that the $f$ in this problem is \textit{not necessarily} the same $f$ from the last problem. With that in mind, let's look back over the statement of \textbf{Problem 2 / 3} so that we can identify all of our given information, and decipher what output we want to produce.}\\
 
-The problem statement tells us that we are given two input variables. One is a function $f$ which takes only one value at a time, the other is a row vector, $x$. Before we start writing a bunch of code, let's take a minute to analyze the given information. Since $f$ takes only one value at a time, we can't do this $f([1, 2])$, or this $f([x_1, x_2, x_3])$, or this $f([x_1, x_2, \dots, x_n])$, or so on. The best we can hope to do is throw one value into $f$ at a time, like this $f(1), f(2)$, or this $f(x_1), f(x_2), f(x_3)$, or this, $f(x_1), f(x_2), \dots, f(x_n)$. We also know that $x$ is a row vector. But we don't know how many entries it has. So as I'm getting my head around this problem, I'm just going to write down what $x$ looks like in general. We have
+The problem statement tells us that we are given two input variables. One is a function $f$ which takes only one value at a time, the other is a row vector, $x$. Since $f$ takes only one value at a time, we can't do this $f([1, 2])$, or this $f([x_1, x_2, x_3])$, or this $f([x_1, x_2, \dots, x_n])$, or so on. The best we can hope to do is throw one value into $f$ at a time, like this $f(1), f(2)$, or this $f(x_1), f(x_2), f(x_3)$, or this, $f(x_1), f(x_2), \dots, f(x_n)$. We also know that $x$ is a row vector. But we don't know how many entries it has. So as I'm getting my head around this problem, I'm just going to write down what $x$ looks like in general. We have
 
 \[
 x = [x_1, x_2, \dots, x_m]
@@ -89,7 +89,32 @@ for some integer $m$ with $m \geq 1$. That is, $x$ may have 100 entries, it may 
 y = [ f(x_1), f(x_2), \dots, f(x_m)]
 \]
 
-\textbf{Stop!} 
+{\setlength{\parindent}{0cm}
+\textbf{Stop!} After doing some analysis, let's review the problem statement and make sure we're on the right track.} \\
+
+Have we accounted for every bit of information given in the statement above? We've looked at $x$, $f$, and we've got a descent candidate for $y$. Since the statement tells us that $y$ is a row vector of the values $f(x_j)$ for \textit{each} element in $x$, and since $x$ has the form $x = [x_1, x_2, \dots, x_m]$, then we can conclude that the vector $y$ (which we want to make our output) needs to have the form $y = [ f(x_1), f(x_2), \dots, f(x_m)]$. But we know that we can't simply do this
+
+\[
+y = f(x)
+\]
+
+{\setlength{\parindent}{0cm}
+because $x = [ x_1, x_2, \dots, x_m]$. We were told \textit{explicitly} that $f(x) = f([x_1, x_2, \dots, x_m])$ can \textbf{not} work because $f$ takes only one value at a time. Then we'll need to come up with another way to fill a row vector $y$ with the $m$ values $f(x_j)$. Notice that we know how big our row vector $y$ has to be. Each entry in $y$ corresponds to a given entry in $x$. Then $y$ and $x$ must be row vectors of the same size. In summary, we have}
+
+\[
+x = [x_1, x_2, \dots, x_m]
+\]
+
+{\setlength{\parindent}{0cm}
+and we want}
+
+\[
+y = [f(x_1), f(x_2), \dots, f(x_m)].
+\] \\
+
+This
+
+
 
 \end{document}
 
