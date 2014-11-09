@@ -1,0 +1,41 @@
+clear all;close all;clc
+
+% Plotting f(x) = Gamma(x+1)
+
+x = 0:0.01:2;
+
+%%%%%% evaluateF(f,x) %%%%%%
+y = zeros(size(x));
+
+for i = 1:size(y,2)
+    
+    y(i) = f(x(i));
+    
+end
+%%%%%% evaluateF(f,x) %%%%%%
+
+plot(x,y)
+%%
+close all
+
+[X Y] = meshgrid(-2:0.05:2,-2:0.05:2);
+
+
+z = zeros(size(X));
+
+for i = 1:size(X,1)
+    for j = 1:size(X,2)
+    
+        %if we're near the negative real axis
+        %Gamma might blow up. Don't want that.
+        if (X(i,j) < 0 && abs(Y(i,j)) < 0.1)
+            z(i,j) = 0;  %make asymptotes 0
+        else
+            z(i,j) = f(complex(X(i,j),Y(i,j)));
+        end
+    
+    end
+end
+%%%%%% evaluateF(f,x) %%%%%%
+
+% plot(x,y)
