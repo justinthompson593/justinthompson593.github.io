@@ -112,9 +112,13 @@ and we want}
 y = [f(x_1), f(x_2), \dots, f(x_m)].
 \] \\
 
-\textbf{Stop!} Did we get all of the information we need from the problem statement? I think so. The two relations above describe the entire problem. We have a row vector with $m$ entries and we want to construct a row vector $y$ with $m$ entries. How big is $m$? Well, it could be $1$. It could be $2$. It could be $2^{16}-1$. \textit{We don't know how large} $m$ \textit{is}. 
+\textbf{Stop!} Did we get all of the information we need from the problem statement? I think so. The two relations above describe the entire problem. We have a row vector with $m$ entries and we want to construct a row vector $y$ with $m$ entries. So we're ready to move on.\\ 
 
+How big is $m$? Well, it could be $1$. It could be $2$. It could be $2^{16}-1$. \textit{We don't know how large} $m$ \textit{is}. The only thing we \textit{do} know is that $m$ is the length of $x$. On page 2 of the exam, you were given the MATLAB command \texttt{size(x)}. The exam states that for a vector \texttt{x}, we have $D = \;$\texttt{size(x)} , where $D$ is the number of elements in \texttt{x}. This is actually inaccurate. If \texttt{x} is a vector or matrix (of any size), then $D = \;$\texttt{size(x)}, where $D$ is a $1 \times 2$ row vector, whose entries are the dimensions of \texttt{x}. \\
 
+For example, suppose \\
+
+\lstinputlisting{f.m}
 
 
 Think about the utility of having a function which can take a vector \textit{of any} length.
