@@ -90,9 +90,7 @@ y = [ f(x_1), f(x_2), \dots, f(x_m)]
 \]
 
 {\setlength{\parindent}{0cm}
-\textbf{Stop!} After doing some analysis, let's review the problem statement and make sure we're on the right track.} \\
-
-Have we accounted for every bit of information given in the statement above? We've looked at $x$, $f$, and we've got a descent candidate for $y$. Since the statement tells us that $y$ is a row vector of the values $f(x_j)$ for \textit{each} element in $x$, and since $x$ has the form $x = [x_1, x_2, \dots, x_m]$, then we can conclude that the vector $y$ (which we want to make our output) needs to have the form $y = [ f(x_1), f(x_2), \dots, f(x_m)]$. But we know that we can't simply do this
+\textbf{Stop!} After doing some analysis, let's review the problem statement and make sure we're on the right track. Have we accounted for every bit of information given in the statement above? We've looked at $x$, $f$, and we've got a descent candidate for $y$. Since the statement tells us that $y$ is a row vector of the values $f(x_j)$ for \textit{each} element in $x$, and since $x$ has the form $x = [x_1, x_2, \dots, x_m]$, then we can conclude that the vector $y$ (which we want to make our output) needs to have the form $y = [ f(x_1), f(x_2), \dots, f(x_m)]$. But we know that we can't simply do this}
 
 \[
 y = f(x)
@@ -116,15 +114,11 @@ y = [f(x_1), f(x_2), \dots, f(x_m)].
 
 How big is $m$? Well, it could be $1$. It could be $2$. It could be $2^{16}-1$. \textit{We don't know how large} $m$ \textit{is}. The only thing we \textit{do} know is that $m$ is the number of elements in $x$. On page 2 of the exam, you were given the MATLAB command \texttt{size(x)}. The exam states that for a vector \texttt{x}, we have \texttt{D = size(x)} , where \texttt{D} is the number of elements in \texttt{x}. This is actually inaccurate. If \texttt{x} is a vector or matrix (of any size), then \texttt{D = size(x)}, where \texttt{D} is a $1 \times 2$ row vector, whose entries are the dimensions of \texttt{x}. For example, suppose that \texttt{x} is the row vector given by \texttt{x = [1, 3, 5, 7]}. Then \texttt{x} is $1 \times 4$, so that \texttt{D = [1, 4] = size(x)}. If \texttt{x} were a matrix given by \texttt{x = [1, 2, 3; 4, 5 6]}, then \text{x} is $2 \times 3$ so that \texttt{D = [2, 3] = size(x)}. There is a function, \texttt{length}, which has the property that if \texttt{x} is is a row vector or a column vector, then \texttt{L = length(x)} where \texttt{L} is the number of elements in \texttt{x}. We'll come back to this below. \\
 
- Okay. Let's consider our "given" vector $x = [x_1, x_2, \dots, x_m]$. There are two ways to get the value $m$ from $x$ by using the function \texttt{size}. One way it to assign \texttt{size(x)} to a variable like this $D = \;$\texttt{size(x)}. Then $[1, m] = D$, so that $m = D(2)$, or equivalently, $m = D(1,2)$. A better way to access this number is by throwing a second argument into \texttt{size}. Since we know that $x$ is a row vector, then we want its second dimension for $m$. To do this, we can write $m = \;$\texttt{size(x,2)}. If we wanted to assign the first dimension of $x$ a variable named $n$, we would write $n = \;$\texttt{size(x,1)}.\\
-
-
-
-
+ Okay. Let's consider our given vector $x = [x_1, x_2, \dots, x_m]$. There are two ways to get the value $m$ from $x$ by using the function \texttt{size}. One way it to assign \texttt{size(x)} to a variable like this \texttt{D = size(x)}. Then we have \texttt{[1, m] = D}, so that \texttt{m = D(2)}, or equivalently, \texttt{m = D(1,2)}. A better way to access this number is by throwing a second argument into \texttt{size}. Since we know that $x$ is a row vector, then we want its second dimension for $m$. To do this, we can write \texttt{m = size(x,2)}. If we wanted to assign the first dimension of $x$ a variable named \texttt{n}, we would write \texttt{n = size(x,1)}. For grading purposes, I treated your usage of \texttt{size} as either returning a vector or returning number of entries of $x$ depending on the context of your code. That being said, I took off points for \emph{inconsistent} usages of variables and functions in your code.\\
 
 Earlier, I noted that we did a lot of work in the previous problem in order to get information about some $f(x)$, and that the $f$ in this problem is not \textit{necessarily} the same $f$. Maybe your boss gave you some data and told you to work on getting an $f$ to fit that data. Then later that morning, you get an email from your boss with a vector $x$ and some function $f$ with some weird stipulations on it. It may or may not have anything to do with the $f$ that she told you to work on earlier! I agree that this is a very tricky problem, but that is precisely the point. Computational science and math require careful attention to detail.\\
 
-Suppose that this is the mysterious $f$, which happens to have nothing to do with your previous work.\\
+Suppose that the following code is the mysterious $f$, which happens to have nothing to do with your previous work.
 
 \lstinputlisting{f.m}
 
@@ -133,14 +127,16 @@ I urge you to either (a) copy and paste everything (except the page number) from
 \lstinputlisting{untitled.m}
 
 {\setlength{\parindent}{0cm}
-From here, you can change your new file to look like the one I made. You only have to copy and paste one line and change the first line a little. A MATLAB function must have the same filename as the function name. If you've changed \texttt{untitled} to \texttt{f}, then when you go to save the file, MATLAB will already suggest that its name should be \text{f.m}. If you changed the top line so that it reads "\texttt{function out = myWickedCoolFunction( x )}, then MATLAB will suggest that its name should be \texttt{myWickedCoolFunction.m}, and so on. You need to name the file so that the two names are the same. So if I did this}
+From here, you can change your new file to look like the one I made. You only have to copy and paste one line and change the first line of your file a little. A MATLAB function must have the same filename as the function name. If you've changed \texttt{untitled} to \texttt{f}, then when you go to save the file, MATLAB will already suggest that its name should be \text{f.m}. If you changed the top line so that it reads "\texttt{function out = myWickedCoolFunction( x )}, then MATLAB will suggest that its name should be \texttt{myWickedCoolFunction.m}, and so on. You need to name the file so that the two names are the same. So if I did this}
 
 \lstinputlisting{continuousFactorial.m}
 
 {\setlength{\parindent}{0cm}
-then I would need to make sure I save my file as \texttt{continuousFactorial.m}. But let's move on as though you've saved your function as \texttt{f.m}. Making sure that the file \texttt{f.m} is in your Current Folder (one of the windows in the MATLAB environment), also called your current or working directory, then you can type \texttt{f(3)} into the command window. The returned value should be $6.000$, if you're only showing 4 decimal places. You can type \texttt{format long} into the command window, hit return, then type \texttt{f(3)} again. You'll see that this is a \textit{very} good numerical approximation to the true value, $3! = 6$. Now try this. Define a vector $x$ by typing \texttt{x = 0:0.01:3;} Then try \texttt{f(x)} and you'll get all kinds of scary errors. This is what we mean by "$f(x_j)$ only accepts one value at a time."}\\
+then I would need to make sure I save my file as \texttt{continuousFactorial.m}.} \\
 
-Moving on. 
+Let's move on as though you've saved your function as \texttt{f.m}. Making sure that the file \texttt{f.m} is in your Current Folder (one of the windows in the MATLAB environment), also called your current or working directory, then you can type \texttt{f(3)} into the command window. The returned value should be $6.000$, if you're only showing 4 decimal places. You can type \texttt{format long} into the command window, hit return, then type \texttt{f(3)} again. You'll see that this is a \textit{very} good numerical approximation to the true value, $3! = 6$. Now try this. Define a vector $x$ by typing \texttt{x = 0:0.01:2;} Then try \texttt{f(x)} and you'll get all kinds of scary errors. This is what we mean by "$f(x_j)$ only accepts one value at a time."\\
+
+There are many ways to complete the function \texttt{evaluateF}. The most straightforward way I can think about is to use a \texttt{for} loop. We can use this method because MATLAB gives us a way to access the number of elements in 
 
 \end{document}
 
