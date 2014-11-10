@@ -1,0 +1,9 @@
+function [ OUT ] = continuousFactorial( IN )
+
+% OUT = Gamma(IN+1) = (IN)! 
+%              (for in = a + i*b with a > 0) 
+
+Y = integral(@(t) t.^(X).*exp(-t),0,Inf);
+
+end
+
