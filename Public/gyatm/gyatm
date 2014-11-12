@@ -9,8 +9,11 @@ arr=( http://cdn.meme.am/instances/34829877.jpg, http://tadhgkelly.typepad.com/.
 
 for j in ${arr[@]}
 do
-	echo "$j"
-	curl -s -o GetYourAssToMars.jpg http://cdn2.bigcommerce.com/server3800/i9xi4r/products/356/images/991/GET_YOUR_ASS_TO_MARS_3__21540.1410841093.1280.1280.jpg?c=2
+	curl -s -o GetYourAssToMars.jpg "$j"
+	echo "Get your ass to Mars." >> GetYourAssToMars.txt
+	xdg-open GetYourAssToMars.jpg || open GetYourAssToMars.jpg
+	mkdir GetYourAssToMars
+	cd GetYourAssToMars
 done
 
 #for i in `seq 1 10`;
