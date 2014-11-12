@@ -1,14 +1,17 @@
 #!/bin/bash
 
-curl -s -o GetYourAssToMars.jpg http://cdn2.bigcommerce.com/server3800/i9xi4r/products/356/images/991/GET_YOUR_ASS_TO_MARS_3__21540.1410841093.1280.1280.jpg?c=2
-#http://cdn.meme.am/instances/34829877.jpg
-#http://tadhgkelly.typepad.com/.a/6a0120a8f8e2b8970b017d3d4e6409970c-pi
+# curl -s -o GetYourAssToMars.jpg http://cdn2.bigcommerce.com/server3800/i9xi4r/products/356/images/991/GET_YOUR_ASS_TO_MARS_3__21540.1410841093.1280.1280.jpg?c=2
+arr={http://cdn.meme.am/instances/34829877.jpg, http://tadhgkelly.typepad.com/.a/6a0120a8f8e2b8970b017d3d4e6409970c-pi}
 #https://31.media.tumblr.com/47ee2664ecd23b3be4014742615b3f4b/tumblr_inline_nb0kf5y6tS1sy96x5.gif
 
+for j in `seq 1 2`;
+do
+	echo "This is iteration $j"
+done
 
 for i in `seq 1 10`;
 do
-	echo "Get your ass to Mars" >> GetYourAssToMars.txt
-	mkdir GetYourAssToMars
-	cd GetYourAssToMars
+# 	echo "Get your ass to Mars" >> GetYourAssToMars.txt
+# 	mkdir GetYourAssToMars
+# 	cd GetYourAssToMars
 done	
