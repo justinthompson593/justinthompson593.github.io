@@ -4,9 +4,14 @@ echo
 echo
 echo "*********************"
 echo "Running lookAtData..."
+echo
 
 curl -o Data.jpg http://justinthompson593.github.io/Public/data/data.jpg
 
+xdg-open Data.jpg || open -a preview Data.jpg 
+
+echo
 echo "Done.
 echo "*********************"
-
+echo 
+echo
