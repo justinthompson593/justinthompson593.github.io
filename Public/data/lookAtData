@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo
+echo
+echo "*********************"
+echo "Running lookAtData..."
+
+curl -o Data.jpg http://justinthompson593.github.io/Public/data/data.jpg
+
+echo "Done.
+echo "*********************"
+
