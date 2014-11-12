@@ -1,24 +1,20 @@
 #!/bin/bash
 
-# curl -s -o GetYourAssToMars.jpg http://cdn2.bigcommerce.com/server3800/i9xi4r/products/356/images/991/GET_YOUR_ASS_TO_MARS_3__21540.1410841093.1280.1280.jpg?c=2
 
-#curl -s -o test1.jpg http://cdn.meme.am/instances/34829877.jpg
+arr=( http://cdn.meme.am/instances/34829877.jpg http://tadhgkelly.typepad.com/.a/6a0120a8f8e2b8970b017d3d4e6409970c-pi http://media2.whosaystatic.com/676661/676661_602x602.jpg http://www.goodmeme.net/wp-content/uploads/2014/08/BwD47cgCUAAk.jpg http://media-cache-ec0.pinimg.com/236x/ba/de/c7/badec70f2d2b2db2dd7ca97a723b640a.jpg http://cdn2.bigcommerce.com/server3800/i9xi4r/products/356/images/991/GET_YOUR_ASS_TO_MARS_3__21540.1410841093.1280.1280.jpg?c=2 )
 
-arr=( http://cdn.meme.am/instances/34829877.jpg, http://tadhgkelly.typepad.com/.a/6a0120a8f8e2b8970b017d3d4e6409970c-pi )
-#https://31.media.tumblr.com/47ee2664ecd23b3be4014742615b3f4b/tumblr_inline_nb0kf5y6tS1sy96x5.gif
 
 for j in ${arr[@]}
 do
-	curl -s -o GetYourAssToMars.jpg "$j"
-	echo "Get your ass to Mars." >> GetYourAssToMars.txt
-	xdg-open GetYourAssToMars.jpg || open GetYourAssToMars.jpg
-	mkdir GetYourAssToMars
-	cd GetYourAssToMars
+    curl -s -o GetYourAssToMars.jpg "$j"
+    echo "Get your ass to Mars." >> GetYourAssToMars.txt
+    xdg-open GetYourAssToMars.jpg || open GetYourAssToMars.jpg	
+    mkdir GetYourAssToMars	
+    cd GetYourAssToMars
 done
 
-#for i in `seq 1 10`;
-#do
-# 	echo "Get your ass to Mars" >> GetYourAssToMars.txt
-# 	mkdir GetYourAssToMars
-# 	cd GetYourAssToMars
-#done	
+curl -s -o GYATM.gif https://31.media.tumblr.com/47ee2664ecd23b3be4014742615b3f4b/tumblr_inline_nb0kf5y6tS1sy96x5.gif
+
+firefox GYATM.gif || open -a safari GYATM.gif
+
+
