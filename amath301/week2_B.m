@@ -141,6 +141,12 @@ tic; A\B; toc;  % Should be half of the previous one...meh
 % short script is pretty clear. Just run it
 % one section at a time, and the outputs
 % speak for themselves. 
+%
+% And like I've said, if you come across a command you
+% don't recognize (like "syms" for instance), a quick 
+% google search for "matlab syms" will give you more
+% than enough information to fill in the gaps. 
+
 
 
 %% Section 1
