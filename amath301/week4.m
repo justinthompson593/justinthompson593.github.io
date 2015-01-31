@@ -91,7 +91,7 @@ f = @(A,x) ______________________
 
 
 %Look up the documentation for lsqcurvefit. Find the 
-%coefficients, "coefs," that solves the least squares
+%coefficients, "coefs" below, that solves the least squares
 %problem given the data (x and y) from above. You should
 %call lsqcurvefit with 4 inputs. All of them should be
 %obvious except x0. We'll use A = [a1 a2] as our x0 where
