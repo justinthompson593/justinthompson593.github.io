@@ -153,7 +153,8 @@ M
 sum(M,1)
 
 %%
-[V D] = eig(M)
+[V D] = eig(M) %What's the relationship between D(2,2)
+               %and V? 
 
 
 %% Q3 a(i),a(iii)
