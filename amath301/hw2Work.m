@@ -48,8 +48,10 @@ for i = 1:size(A2,1)
    
     z_n = ones(n,1);
    
-    A(i,1) = norm( z_n - hilb(n)\(hilb(n)*z_n) ,Inf);
-    A(i,2) = norm( z_n - hilb(n)*(hilb(n)\z_n),Inf);
+    %This didn't work in class because I had A(i,1) here
+    %and not A2(i,1) and so on. 
+    A2(i,1) = norm( z_n - hilb(n)\(hilb(n)*z_n) ,Inf);
+    A2(i,2) = norm( z_n - hilb(n)*(hilb(n)\z_n),Inf);
 
 end
 
