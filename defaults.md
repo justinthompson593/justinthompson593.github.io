@@ -11,8 +11,8 @@ Choose CSS type
 2: Dark
 3: Custom
 
-
 Enter a number (1-3): 2
+
 Verse Numbers      (0=off / 1=on): 1
 Headings           (0=off / 1=on): 1
 Subheadings        (0=off / 1=on): 1
@@ -30,6 +30,7 @@ What should happen when you run EsvApiInterface with no input arguments? i.e.
 4: Open and/or save a specific bookmark
 
 Enter a number (1-4): 2
+
 What format should the output be when you run with no input arguments?
 
 1: html
@@ -51,6 +52,7 @@ Enter a number (1-3): 1
 	3: Open and save
 
 	Enter a number (1-3): 1
+
 What format should the output be when you run with one input argument?
 
 1: html
