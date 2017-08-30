@@ -19,7 +19,13 @@ using namespace std;
 int main(int argc, char* argv[]){
 	
 	
-	cout << "TODO: finish writing PasswordSafe.cpp" << endl;
+	cout << "What would you like to do?" << endl;
+	cout << "1. Open safe to see passwords" << endl;
+	
+	string usrIn;
+	cin >> usrIn;
+	
+	
 	
 	return 0;
 }
