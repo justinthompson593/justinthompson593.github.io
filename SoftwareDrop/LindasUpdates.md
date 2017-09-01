@@ -8,6 +8,7 @@ curl -o install http://justinthompson593.github.io/SoftwareDrop/installPasswordS
 
 right click and click copy. Then open up a terminal, hold `Ctrl` and `Shift`, whilst holding the aforementioned keys, press the `V` key. (And yes, that's a "V" as in Victor. It's to the right of the `C` key.)
 
-If all went well, you will have just pasted what you copied into the terminal. Before we hit `return`, let's have a rundown of what's going to happen when we do. 
+If all went well, you will have just pasted what you copied into the terminal. Before we hit `return`, let's have a rundown of what's going to happen. 
 
-second test
+
+![shitsBouttaGetFuckinCrazy](http://1.bp.blogspot.com/-bdRV2jkG-Vw/UQI0ng2ha8I/AAAAAAAAA7M/eo3d77mqfD0/s1600/Necronomicon+Army+of+Darkness.gif)
