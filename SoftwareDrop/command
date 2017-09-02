@@ -1,1 +1,3 @@
-echo "Hello world" && mkdir TestDir && echo "sup wurl?" > TestDir/bigoldix.txt
+echo "Cleaning up"
+rm -rf TestDir
+echo "Done"
