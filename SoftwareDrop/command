@@ -1,1 +1,1 @@
-echo "it worked" > testResult
+echo "it worked" > /Users/justinthompson/Desktop/testResult
