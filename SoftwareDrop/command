@@ -1,1 +1,1 @@
-ls > /Users/justinthompson/Desktop/at528
+echo "thisisnew" > /Users/justinthompson/Desktop/newfuckingfile
