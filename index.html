@@ -1,187 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<script language="javascript" type="text/javascript" src="PasswordProcessor.js"></script>
+			<!-- this line removes any default padding and style. you might only need one of these values set. -->
+			<style> body {padding: 0; margin: 0;} </style>
+	</head>
+	
+	<body>
+		
+		<h1>Password Processor</h1>
+		
+<!--		<input type="text" id="myText" value="Some text...">-->
+		<input type="password" class="form-control" placeholder="Enter your Password" id="password"/>
+		
+		<p>Click the "Try it" button to get the text in the text field.</p>
+		
+		<button onclick="debug()">DEBUG</button>
+		<button onclick="getUrl()">URL</button>
+		<button onclick="parseUrl()">Parse URL</button>
+		<br>
+		<button onclick="getPin()">Get PIN</button>
+		<button onclick="getOuterProduct()">Outer Product</button>
+		<button onclick="getReverseOuterProduct()">Reverse Outer Product</button>
+		<br>
+		<button onclick="printSymbolSet()">Print Symbol Set</button>
+		<button onclick="clearOutput()">Clear</button>
+		<button onclick="hideOutput()">Hide</button>
+		<br><br>
+		<input class="form-control" placeholder="String / Binary String" id="str"/>
+		<br>
+		<button onclick="StringToBinary()">String to Binary</button>
+		<button onclick="BinaryToString()">Binary to String</button>
+			
+		<p id="output"></p>
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Justin Thompson's Home Page</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/blog-home.css" rel="stylesheet">
-    
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                	<li>
-                        <a href="http://justinthompson593.github.io">Home</a>
-                    </li>
-                    <li>
-                        <a href="http://github.com/justinthompson593">github</a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/justin.thompson.9883">facebook</a>
-                    </li>
-                    <li>
-                        <a href="http://www.linkedin.com/in/justincthompson">linkedin</a>
-                    </li>
-                    <li>
-                        <a href="mailto:justinthompson593@gmail.com">gmail</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Blog Entries Column -->
-            <div class="col-md-8">
-
-<!--
-old gifs 
-Frequency: http://gfycat.com/EmbarrassedYellowishHuia
--->
-				
-					<a href="http://i.imgur.com/KHMzSrD.gif"><img class="img-responsive" src="http://i.imgur.com/KHMzSrD.gif" alt=""></a>
-<!--
-                    <p>This animation is a clip from an OpenGL project I call <i><a href="Frequency.html" >Frequency</a></i>.</p>
--->					
-				<p></p>
-				<hr>
-
-								
-				<h2>A Letter to Barack Obama</h2>
-				<p>I invite you to read my <a href="http://alettertobarackobama.github.io" >letter</a>.</p>
-				<hr>
-
-
-				
-				<h2>Tutorials</h2>
-                        <p>I wrote <a href="MarissaTutorial.html">these tutorials</a> for Marissa Dominguez during a research scholarship she was awarded in 2014.</p>
-				<hr>
-
-				
-				
-				<h2>Amath 301</h2>
-                    <p><a href="AMATH301.html">This page</a> has some solutions to various homeworks and exams, along with some exercises and extra credit problems I wrote up while TAing AMATH 301 at UW.</p>
-				<hr>
-				
-
-				
-				
-
-
-<!--
-				<h1>Projects</h1>
-                    <h3>The Electric Depth Project</h3>
-                        <a href="ElectricDepthProject.html">
-                            <img class="img-responsive" src="ElectricDepth/images/EDPCover.png">
-                        </a>
-                    <br>    
-                    <h3>Musical Genre Classification</h3>
-                            <a href="Music.html">
-                    			<img class="img-responsive" src="Music/images/MusicPrjCover.png">
-                            </a>
-                <hr>
--->
-                
-
-                <h1>Links</h1>
-                    <p><a href="http://www.veteransforpeace.org">Veterans for Peace</a></p>
-                    <p><a href="http://www.ivaw.org">Iraq Veterans Against the War</a></p>
-                    <p><a href="http://www.dimensions-math.org">Dimensions</a> is a beautiful film about mathematics. It's free to watch online and it intuitively presents topics like stereographic projection, Julia sets, 4-dimensional objects...</p>
-                    <p><a href="http://www.chaos-math.org/en">Chaos</a> is another film by the makers of Dimensions. It talks about dynamical systems and chaos. I highly recommend watching it if you're taking any class with "calculus" in the title.</p>
-                    <p><a href="http://www.learncpp.com">This</a> is an excellent C++ tutorial.</p>
-                    
-				<hr>
-
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Justin Thompson</strong>
-                    	</h4>
-                    	
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (206) 387-8373</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:justinthompson593@gmail.com">@gmail.com</a>
-                        </li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:jct2112@uw.edu">@uw.edu</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="https://github.com/justinthompson593"><i class="fa fa-github fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/justincthompson"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/justin.thompson.9883"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
+		
+	</body>
 </html>
