@@ -167,4 +167,61 @@
 		</style>
 		
 	</head>
+
+
+<body onload="checkCookie()">	
+	
+	<!--		Header-->
+			<ul>
+				
+				
+				<li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Text</a>
+					<div class="dropdown-content">
+						<div class="slidecontainer">
+						Width <input type="range" min="256" max="2048" value="950" class="slider" id="widthSlider">
+						</div>
+						<br>
+						<div class="slidecontainer">
+						Text Size <input type="range" min="2" max="200" value="100" class="slider" id="fontSlider">
+						</div>
+						<br>
+						<div class="slidecontainer">
+						Number Size <input type="range" min="0" max="125" value="67" class="slider" id="numSizeSlider">
+						</div>
+						<br>
+						Font
+						<br>
+						<select onchange="updateFont(this);" size="13">
+						  <option>Lucida Console</option>
+						  <option>Lucida Grande</option>
+						  <option>Arial</option>
+						  <option>Arial Black</option>
+						  <option>Courier</option>
+						  <option>Courier New</option>
+						  <option>Georgia</option>
+						  <option>Palatino Linotype</option>
+						  <option>Book Antiqua</option>
+						  <option>Times New Roman</option>
+						  <option>Helvetica</option>
+						  <option>Impact</option>
+						  <option>Tahoma</option>
+						  <option>Verdana</option>
+						</select>
+						
+					</div></li>
+					<li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Colors</a>
+						<div class="dropdown-content">
+							<input class="jscolor {onFineChange:'updateBackground(this)'}" value="1E1E1E"> Background
+							<br>
+							<input class="jscolor {onFineChange:'updateText(this)'}" value="B0B0B0"> Text
+						
+						</div></li>
+						
+			</ul>
+	
+	
+	<script src="../jscolor.js"></script>
+	
+</body>
+
 </html>
