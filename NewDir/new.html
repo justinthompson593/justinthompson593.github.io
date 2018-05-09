@@ -222,6 +222,108 @@
 	
 	<script src="../jscolor.js"></script>
 	
+
+	<script>
+		
+		function checkCookie() {
+			var txtC = getCookie("txColor");
+			if (txtC != ""){
+				document.body.style.color = txtC;
+			} 
+			var bkgC = getCookie("bkColor");
+			if(bkgC != ""){
+				document.body.style.background = bkgC;
+			}
+			var fntC = getCookie("font");
+			if(fntC != ""){
+				document.body.style.fontFamily = fntC;
+			}
+			var fsC = getCookie("fontsize");
+			if(fsC != ""){
+				document.body.style.fontFamily = fsC;
+			}
+			var widC = getCookie("width");
+			if(widC != ""){
+				document.getElementById("v").style.width = widC;
+			}
+ 
+		    
+		}
+		// background-color: #474D45;
+		// color: #D5D5D5;
+		
+		
+		function setCookie(cname, cvalue, days) {
+		    var d = new Date();
+		    d.setTime(d.getTime() + (days*24*60*60*1000));
+		    var expires = "; expires="+ d.toUTCString();
+		    document.cookie = cname + "=" + cvalue + expires + ";";
+		}
+		
+		function getCookie(cname) {
+		    var name = cname + "=";
+		    var decodedCookie = decodeURIComponent(document.cookie);
+		    var ca = decodedCookie.split(';');
+		    for(var i = 0; i <ca.length; i++) {
+		        var c = ca[i];
+		        while (c.charAt(0) == ' ') {
+		            c = c.substring(1);
+		        }
+		        if (c.indexOf(name) == 0) {
+		            return c.substring(name.length, c.length);
+		        }
+		    }
+		    return "";
+		}
+		
+		var slider = document.getElementById("widthSlider");
+		slider.oninput = function(){
+			var newWidth = this.value + "px";
+			document.getElementById("v").style.width = newWidth;
+			setCookie("width", newWidth);
+		}
+		
+		var fSlider = document.getElementById("fontSlider");
+		fSlider.oninput = function(){
+			var newFont = this.value + "%";
+			document.getElementsByTagName( "body" )[0].style[ "font-size" ] = newFont;
+			setCookie("fontsize", newFont);
+		}
+		
+		var numSizeSlider = document.getElementById("numSizeSlider");
+		numSizeSlider.oninput = function(){
+			var newSize = this.value + "%";
+			var elements = document.getElementsByClassName('num');
+ 
+			for (var i = 0; i < elements.length; i++) {
+			  var element = elements[i];
+			  element.style.fontSize = newSize;
+			}
+			// document.getElementsByTagName( "body" )[0].style[ "font-size" ] = newFont;
+			// setCookie("fontsize", newFont);
+		}
+		
+		function updateFont(selectTag){
+			var listValue = selectTag.options[selectTag.selectedIndex].text;
+			document.body.style.fontFamily = listValue;
+			setCookie("font", listValue);
+		}
+ 
+		// Colors
+		function updateBackground(picker) {
+			document.body.style.background = picker.toHEXString();
+			setCookie("bkColor",picker.toHEXString());
+		}
+		function updateText(picker) {
+			document.body.style.color = picker.toHEXString();
+			setCookie("txColor",picker.toHEXString());
+		}
+	</script>
+	
+	
+
+
+
 </body>
 
 </html>
