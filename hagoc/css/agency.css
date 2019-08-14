@@ -280,20 +280,13 @@ header.masthead .intro-text .intro-lead-in {
 }
 
 header.masthead .intro-text .intro-heading {
-	
-	/*    font-size: 75px;*/
-		font-size: 50px;
-	    font-weight: 700;
-	/*    line-height: 75px;*/
-		line-height: 50px;
-	    margin-bottom: 50px;
-	/*	color: #850909;*/
-	/*	color: #000;*/
-		color: #fff;
-		text-shadow: -1px -1px 0 #850909, 1px -1px 0 #850909, -1px 1px 0 #850909, 1px 1px 0 #850909;
-	/*    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';*/
-	/*	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;*/
-		font-family: fantasy;
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 50px;
+	margin-bottom: 50px;
+	color: #fff;
+	text-shadow: -1px -1px 0 #850909, 1px -1px 0 #850909, -1px 1px 0 #850909, 1px 1px 0 #850909;
+	font-family: fantasy;
 
 
   /*font-size: 50px;
@@ -302,6 +295,7 @@ header.masthead .intro-text .intro-heading {
   margin-bottom: 25px;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';*/
 }
+
 
 @media (min-width: 768px) {
   header.masthead .intro-text {
