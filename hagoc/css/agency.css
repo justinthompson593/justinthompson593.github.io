@@ -36,12 +36,21 @@ h6 {
 }
 
 /*Wrapper for archdiocese logo and HA logo*/
-#logoWrapper {
+/*#logoWrapper {
 	white-space: nowrap;
     overflow-x: hidden;
     overflow-y: hidden;
-}
+}*/
 /*Wrapper for archdiocese logo and HA logo*/
+
+/*Resize logo if screen is small*/
+@media only screen and (max-width: 400px) {
+	#navlogo {
+		width: 100%;
+		height: auto !important;
+	}
+}
+/*Resize logo if screen is small*/
 
 /*Wrapper for YouTube video*/
 .videoWrapper {
@@ -287,13 +296,13 @@ header.masthead .intro-text .intro-lead-in {
 }
 
 header.masthead .intro-text .intro-heading {
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 50px;
-  margin-bottom: 50px;
-  color: #fff;
-  text-shadow: -1px -1px 0 #850909, 1px -1px 0 #850909, -1px 1px 0 #850909, 1px 1px 0 #850909;
-  font-family: fantasy;
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 50px;
+	margin-bottom: 50px;
+	color: #fff;
+	text-shadow: -1px -1px 0 #850909, 1px -1px 0 #850909, -1px 1px 0 #850909, 1px 1px 0 #850909;
+	font-family: fantasy;
 
 
   /*font-size: 50px;
@@ -302,7 +311,6 @@ header.masthead .intro-text .intro-heading {
   margin-bottom: 25px;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';*/
 }
-
 
 @media (min-width: 768px) {
   header.masthead .intro-text {
