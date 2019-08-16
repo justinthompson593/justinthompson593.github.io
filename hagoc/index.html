@@ -31,16 +31,16 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
 		
-		<!-- <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/hagoc_logo_2.png" width="335" height="104" usemap="#logomap" border="0"></a>
+		<a class="navbar-brand js-scroll-trigger" href="#page-top"><img id="navlogo" src="img/hagoc_logo_2.png" width="335" height="104" usemap="#logomap" border="0"></a>
 		<map name="logomap">
 		<area shape="rect" coords="0,0,80,104" href="https://www.goarch.org">
 		<area shape="rect" coords="80, 0, 335, 104" href="#page-top">
-		</map> -->
+		</map>
       
-	  <div id="logoWrapper">
-  	  <a class="navbar-brand js-scroll-trigger" href="https://www.goarch.org"><img src="img/goa_seal.png" width="103" height="100"></a>
-  	  <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="img/hagoc_logo_1.png" width="255" height="89"></a>
-	  </div>
+	  <!-- <div id="logoWrapper">
+  	  <a class="navbar-brand js-scroll-trigger" href="https://www.goarch.org"><img id="archlogo" src="img/goa_seal.png" width="103" height="100"></a>
+  	  <a class="navbar-brand js-scroll-trigger" href="#page-top"><img id="halogo" src="img/hagoc_logo_1.png" width="255" height="89"></a>
+	  </div> -->
 	  
 	 
 	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -176,7 +176,23 @@
         </div>
       </div>
       <div class="row">
+		  
         <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#intromodal">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/tree_of_life_thumb.jpg" alt="">
+          </a>
+          <div class="portfolio-caption">
+            <h4>Intro to Orthodoxy</h4>
+            <p class="text-muted">Doctrine and Beliefs</p>
+          </div>
+        </div>
+		
+		<div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
@@ -590,6 +606,40 @@
 
   <!-- Portfolio Modals -->
 
+  <!-- Intro to Orthodoxy -->
+  <div class="portfolio-modal modal fade" id="intromodal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="text-uppercase">Intro to Orthodoxy</h2>
+                <!-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> -->
+                <img class="img-fluid d-block mx-auto" src="img/portfolio/intro.png" alt="">
+                <p>Fr. Evan Armitas from <a target="_blank" rel="noopener noreferrer"  href="http://www.saintspyridon.church/index.php">St. Spyridon Orthodox Church</a> in Loveland, CO has a wealth of information online. Click <a target="_blank" rel="noopener noreferrer"  href="http://stspyridon.dreamhosters.com/archives/category/classes/introduction-to-orthodoxy">this link</a> to go to his online Introduction to Orthodoxy course; a series of eight podcasts introducing the basic concepts of Orthodox theology and practice. From there you can find many other podcasts of his classes, book studies, and bible studies. </p>
+                <!-- <ul class="list-inline">
+                  <li>Date: January 2017</li>
+                  <li>Client: Window</li>
+                  <li>Category: Photography</li>
+                </ul> -->
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times"></i>
+                  Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <!-- Worship -->
   <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
@@ -1115,6 +1165,8 @@ of time. (Matthew.28: 18-20) The fulfillment of these promises is found in Godâ€
     </div>
   </div>
 
+  
+  
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
