@@ -1,4 +1,8 @@
 # Quizzes
 
-1. Quiz 0 
-2. Quit 0.0 
+- Quiz 0 
+  - Introduces the Naturals, Integers, Rationals, Reals, and Complex number systems
+  - Introduces sets of real numbers, union, set difference
+  - Questions on set and interval notation
+- Quiz 0.1
+
