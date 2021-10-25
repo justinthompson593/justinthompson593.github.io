@@ -1,5 +1,8 @@
 # Algebra II 
 
+The class materials can be found [here](https://github.com/justinthompson593/justinthompson593.github.io/tree/master/algebra2). Quizzes can be found in the directory titled "quizzes" and similarly with exams. 
+
 This class began on October 21st, 2021. The student was having a difficult time with her teacher and I was asked to take over teaching the class for the remainder of the year. 
 
-The class materials can be found [here](https://github.com/justinthompson593/justinthompson593.github.io/tree/master/algebra2).
+
+
